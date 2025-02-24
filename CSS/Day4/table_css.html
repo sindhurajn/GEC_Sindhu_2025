@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .table_con {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 80vw;
+            height: 80vh;
+
+        }
+
+        tr:nth-child(2n) {
+            background-color: blueviolet;
+        }
+
+        tr:nth-child(2n+1) {
+            background-color: rgb(36, 201, 91);
+        }
+
+        th {
+            background-color: aqua !important;
+        }
+
+        tr:first-child {
+            background-color: antiquewhite;
+        }
+
+        tr,th,td {
+            padding: 10px;
+            text-align: end;
+            vertical-align: bottom;
+            
+
+
+        }
+
+        /* tr{
+            text-align: center;
+        } */
+    </style>
+</head>
+
+<body>
+    <table border="1px" class="table_con">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>roll_no</th>
+                <th>age</th>
+                <th>address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>lorem</td>
+                <td>12</td>
+                <td>13</td>
+                <td>karnataka</td>
+
+            </tr>
+            <tr>
+                <td>lorem</td>
+                <td>12</td>
+                <td>13</td>
+                <td>karnataka</td>
+
+            </tr>
+            <tr>
+                <td>lorem</td>
+                <td>12</td>
+                <td>13</td>
+                <td>karnataka</td>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

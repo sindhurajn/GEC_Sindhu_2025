@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 90vh;
+            border: 1px solid black;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            
+
+        }
+        .child{
+            margin:2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+        .fir{
+            background-color: rgb(231, 135, 17);
+        }
+        .sec{
+            background-color: palegreen;
+        }
+        .thi{
+            background-color: yellow;
+        }
+        .fort{
+            background-color: brown;
+        }
+        .fiv{
+            background-color: blueviolet;
+        }
+        /* for changing the grids into column when width of screen changes */
+        @media screen and (max-width:500px) {
+            .container{
+                flex-direction: column;
+                grid-template-columns: auto auto;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child fir"></div>
+        <div class="child sec"></div>
+        <div class="child thi"></div>
+        <div class="child fort"></div>
+        <div class="child fiv"></div>
+    </div>
+</body>
+</html>

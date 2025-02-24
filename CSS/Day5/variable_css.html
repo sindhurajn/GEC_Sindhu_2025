@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+    <style>
+        /* :root is used for creating variables */
+        :root{
+            --green:rgba(0, 128, 0, 0.644);
+            /* global variables created */
+            --red:rgba(128, 0, 128, 0.418);
+        }
+        .ptag{
+            background-color: bisque;
+        }
+        .divtag{
+            background-color: var(--green);
+        }
+        .ptag1{
+            background-color: var(--red);
+        }
+        .divtag1{
+            --green:rgba(0, 0, 255, 0.616);
+            /* local variable created */
+            background-color: var(--red);
+            color: var(--green);
+        }
+        .container{
+            height: 30px;
+            margin: 20px auto;
+            border: 2px solid black;
+
+
+        }
+        .child{
+            width: 60%;
+            height: 30px;
+        }
+        .first{
+            background-color: bisque;
+            z-index: 10;
+            position: absolute;
+            top: 100px;
+            left: 300px;
+            /* z-index for overlapping by default it is 0*/
+        }
+        .sec{
+            background-color: rgb(240, 16, 16);
+            top: 200px;
+            left: 100px;
+            position: absolute;
+            margin-top: 20px;
+            z-index: 5;
+            
+        }
+    </style>
+</head>
+<body>
+    <p class="ptag">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium nisi nesciunt sunt quam id eos. Voluptatibus maxime voluptatum eius perspiciatis, excepturi, dolore aliquid consequatur voluptas minus, sit assumenda officia dolorum.</p>
+    <div class="divtag">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, sunt! Velit repellendus, nemo laudantium enim in veritatis eveniet facere beatae quam tenetur alias, exercitationem ducimus, molestiae fuga neque facilis debitis.</div>
+    <p class="ptag1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, repellendus placeat. Quasi ratione aliquam distinctio vel blanditiis laborum natus obcaecati facere. Et vel dicta sunt unde sequi cum vitae magni!</p>
+    <div class="divtag1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas impedit consequuntur itaque, repellat alias similique nisi delectus magni soluta odit iusto, cupiditate sequi maxime veniam error dolorem est earum saepe?</div>
+    <div class="container">
+        <div class="child fir">1</div>
+        <div class="child sec">2</div>
+    </div>
+</body>
+</html>

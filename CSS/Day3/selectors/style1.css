@@ -1,0 +1,38 @@
+p{
+    color: blueviolet;
+
+
+}
+#div{
+    color: black;
+    font-style: italic;
+}
+
+
+*{
+    
+    border: 10px;
+}
+h1,div{
+    border: 2px;
+    color: black;
+
+}
+input[type="text"]{
+    font-style: italic;
+    color: azure;
+    border: 20px;
+    background-color: brown;
+}
+.ptag{
+    color: tomato;
+    text-align: right;
+    border: 10px solid black;
+    /*margin-top: 5px;*/
+    /*margin: 20px 10px 5px 2px;*/
+    margin: 20px 5px;
+    /*padding-top: 20px;*/
+    /*padding: 20px 10px 5px 2px;*/
+    padding: 20px 5px;
+    
+}

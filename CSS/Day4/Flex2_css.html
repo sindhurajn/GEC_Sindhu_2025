@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        *{
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .container{
+            width: 800px;
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            /* justify-content:space-between; */
+            /* align-items:normal; */
+            /* flex-wrap: wrap; */
+            /* align-content: center; */
+            /* flex-direction: for changing the direction of flex into horizontal or vertical reverse  */
+            /* flex-direction: row-reverse; */
+            flex-direction: column;
+    
+            
+
+            
+        }
+        .third{
+                align-self:center;
+                flex-grow: 2;
+           }      
+        
+        .child{
+            width: 50px;
+            height: 40px;
+            border: 2px solid rgb(179, 26, 240);
+            background-color: blanchedalmond;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>This is flex in CSS</h1>
+    <div class="container">
+       <div class="child first">first</div>
+       <div class="child second">second</div>
+       <div class="child third">third</div>
+       <div class="child forth">forth</div>
+       <!-- <div class="child first">first</div>
+       <div class="child second">second</div>
+       <div class="child third">third</div>
+       <div class="child forth">forth</div>
+       <div class="child first">first</div>
+       <div class="child second">second</div>
+       <div class="child third">third</div>
+       <div class="child forth">forth</div>
+       <div class="child first">1111111</div>
+       <div class="child second">222222</div>
+       <div class="child third">3</div>
+       <div class="child forth">4</div>
+       <div class="child first">1111111</div>
+       <div class="child second">222222</div>
+       <div class="child third">3</div>
+       <div class="child forth">4</div> -->
+    </div>
+</body>
+</html>

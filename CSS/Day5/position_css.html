@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body{
+            margin: 30px auto;
+        }
+        .div{
+            border: 2px solid black;
+            /* width: 30px; */
+            height: 50px;
+        }
+        .fir{
+            background-color: aquamarine;
+            position: relative;
+            /* position:relative is used for changing the position of any block. By default it is static we can change it by changing values top,left... it is used for parent cntainer
+            position:absolute is used to change the position based on relative parentposition it will shift the child position. If root element is not relative it will take HTML root element as relative for consideration*/
+            top: 100px;
+            left: 200px;
+        }
+        .container{
+            width: 300px;
+            margin: 30px;
+            border: 1px solid black;
+            position: relative;
+
+        }
+        .sec{
+            background-color: yellow;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .thi{
+            background-color: bisque;
+            position: fixed;
+            /* position:fixed used to fix the position of any object even if wwe move the screen that position wont change  */
+            right: 0;
+            bottom: 0;
+        
+        }
+        .fort{
+            position: sticky;
+            /* position:sticky will stay with in the page even it we scroll the screen up or down it will not go out of the screen */
+            top: o;
+            right: 0;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="div fir">1</div>
+    <div class="div sec">2</div>
+    <div class="div thi">3</div>
+    <div class="div fort">4</div>
+</div>
+</body>
+</html>

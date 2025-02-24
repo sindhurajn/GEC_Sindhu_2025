@@ -1,0 +1,38 @@
+/*#div{
+    background-color: rgb(228, 130, 130);
+    
+}
+body{
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+}
+
+p{
+    background-image: url(./white.jpg);
+    /*background-clip:border-box;*/
+    /*background-clip:padding-box;*/
+    background-clip:content-box;
+    padding: 20px 10px;
+    border: 20px 20px;
+    opacity: 0.5;
+
+}*/
+
+
+.first{
+    background-color: red;
+}
+
+.first{
+    background-color: red;
+    border: 10px solid black;
+}
+.sec{
+    background-color: green ;
+}
+p{
+    background-color: yellow;
+}

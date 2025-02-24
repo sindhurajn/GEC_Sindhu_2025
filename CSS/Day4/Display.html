@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        .div{
+            width: 10vw;
+            height: 10vh;
+            margin: 20px;
+            padding: 10px;
+            display: inline;
+            /* for inline display elements margin  and padding will not apply for top  */
+        }
+        .first{
+             border: 2px solid black;
+            /* display: none; */
+            /* hide that container */
+            /* display: inline; */
+            display: inline-block;
+            /* Inline-block overcomes inline and it is applied for top also and dosent start from next line starts from same line as inline but in block it will take the whole space*/
+           
+            /* visibility:hidden; */
+        }
+        .sec{
+            border: 2px solid blue;
+            
+
+        }
+        .thr{
+            border: 1px solid brown;
+
+        }
+    </style>
+</head>
+<body>
+<div class="div first">Lorem ipsum dolor sit amet 
+</div>
+<div class="div sec">Lorem ipsum dolor sit </div>
+<div class="div thr">Lorem ipsum Totam, quam.</div>
+
+</body>
+</html>

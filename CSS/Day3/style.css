@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+h1{
+    text-align: left;
+    color: azure;
+}
+p{
+    color: azure;
+    font-style: italic;
+}
+div{
+    margin: 20px;
+    color: azure;
+}

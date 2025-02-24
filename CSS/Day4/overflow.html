@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        .container{
+            width: 20vw;
+            height: 20vh;
+            border: 2px solid black;
+        overflow: scroll;
+        /* overflow: hidden; */
+        white-space: nowrap;
+        /* nowrap show para in one line */
+            text-overflow:ellipsis;
+            /* overflow: visible; */
+    }
+        body{
+            padding: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>overflow
+    </h1>
+    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor accusantium ipsum at dolorem, debitis soluta officiis quae repellat sapiente cum totam hic aliquam nihil quis voluptas quaerat quibusdam mollitia rem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas natus non quisquam nesciunt autem neque fuga temporibus a in deserunt quos dolores architecto, provident animi vel maxime? Deleniti, voluptatibus laborum.</div>
+</body>
+</html>

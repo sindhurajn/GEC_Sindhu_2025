@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        th,td {
+            /* border-collapse: collapse; */
+            /* border-color: brown; */
+            /* padding: 5px; */
+            border: 1px solid red;
+
+        }
+    th,td{
+        padding: 5px;
+    }
+    
+    table{
+        border: spacing 10px; ;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Roll NO</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>sindhu</td>
+            <td>047</td>
+            <td>21</td>
+        </tr>
+    </table>
+    <br><br>
+    <!-- for vertical  -->
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <td>sindhu</td>
+
+        </tr>
+        <tr>
+            <th>Roll no</th>
+            <td>047</td>
+
+        </tr>
+        <tr>
+            <th>age</th>
+            <td>21</td>
+        </tr>
+        <br>
+        <br>
+    </table>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>mon</th>
+                <th>tue</th>
+                <th>wed</th>
+                <th>thur</th>
+                <th>frid</th>
+                <th>sat</th>
+            <tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td>3</td>
+                <td colspan="2">4</td>
+                
+                <td rowspan="3">8</td>
+            </tr>
+
+
+            <tr>
+                
+                <td>6</td>
+                <td colspan="2">7</td>
+                <td>9</td>
+                
+            </tr>
+
+
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>6</td>
+                
+                
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

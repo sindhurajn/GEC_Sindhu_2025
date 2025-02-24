@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <h1>Contact form</h1>
+    <form novalidate action="" method="post">
+        <!-- <form action="" method="post"> -->
+        <label for="Name">Name:</label>
+        <!-- <input type="hidden" name="csrf"> -->
+        <!-- <input value="xxxyyy"  readonly type="text" placeholder="Name" name="name" id="name" required><br> -->
+        <input value="xxxyyy" disabled readonly type="text" placeholder="Name" name="name" id="name" required><br>
+        <label for="Email">Email</label>
+        <input type="email" placeholder="Email" name="email" id="email" required value="abc@gmail.com"><br><br>
+        <label for="message">message</label>
+        <textarea placeholder="message" name="message" id="message" required></textarea><br>
+        <!-- <button type="submit">submit</button> -->
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>

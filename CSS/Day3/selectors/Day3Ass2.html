@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+        .profile-header {
+            text-align: center;
+        }
+        .profile-header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .profile-header h1 {
+            margin: 10px 0 5px;
+            font-size: 24px;
+        }
+        .profile-header p {
+            font-size: 16px;
+            color: #666;
+        }
+        .contact-info {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .about-me {
+            margin-top: 20px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .skills div {
+            background: #eee;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .academic {
+            margin-top: 20px;
+        }
+        *{
+            text-align: left;
+        }
+        .search{
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 80px;
+        }
+        /* .search{ */
+  width: 100%;
+  padding: 12px 20px 12px 40px; /* Adjust padding to make space for the icon */
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-image: url(./search.png); /* Replace with your icon's URL */
+  background-position: 10px 10px; /* Position the icon */
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+/* } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <img src="avatar.png" alt="Profile Picture">
+            <h1>Avron</h1>
+            <h4>Product Designer & Notion Creator</h4>
+        </div>
+        <hr>
+        <div class="contact-info">
+            <p>+00 123 456 789</p>
+            <p>yourname@domain.com</p>
+            <p>www.website.com</p>
+            <p>Anytown, CA 12345</p>
+        </div>
+        <hr>
+        <div class="about-me">
+            <h3>ABOUT ME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+        </div>
+        <hr>
+        <div><i class="fa-solid fa-arrow-up"></i>Skills</div><hr>
+        <div class="input">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" class="search" placeholder="Search" >
+        </div> 
+        
+        <div class="skills">
+            <div>Collaboration</div>
+            <div>Communication</div>
+            <div>Creativity</div>
+            <div>Critical Thinking</div>
+            <div>Empathy</div>
+            <div>Time Management</div>
+        </div>
+        <hr>
+        <div class="academic">
+            <h3>ACADEMIC BACKGROUND</h3>
+            <p>University</p>
+            <p>Bachelor Degree · 20XX - 20XX</p>
+        </div>
+    </div>
+</body>
+</html>

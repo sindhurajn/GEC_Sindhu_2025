@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            margin: 20px;
+            border: 2px solid black;
+            display: grid;
+            grid-row: auto;
+            grid-template-areas: "nav nav nav" "main main aside" "footer footer footer"
+            height:80vh;
+            width:80vw;
+            
+            column-gap: 20px;
+            row-gap: 20px;
+            padding: 20px;
+            
+            
+
+        }
+        .first{
+            grid-area: "nav";
+            grid-column: 1/span 3;
+        }
+        .sec{
+            grid-area: "main";
+            grid-column: 1/span 2;
+
+        }
+        .thi{
+            grid-area: "aside";
+        }
+        .forth{
+            grid-area: "footer";
+            grid-column: 1/span 3;
+        }
+        .child{
+            height: auto;
+            width: auto;
+            border: 2px solid black;
+        }
+        /* span is used in grid-row and grid-column for merging grids EX: 2/span 2 ---> 2nd row/column merges 2 grids in  */
+        /* by giving name in grid-template-row: [name]auto...... and using it in grid-row to alter by [name]/span 2 will not change the configuration of the defined grid */
+        .fifth{
+            grid-column: [first]/span 3;
+            grid-row: 2/span 2;
+        }
+        .forth{
+            grid-row: 1/span 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>grids</h1>
+    <div class="container">
+        <div class=" child first">1</div>
+        <div class=" child sec">2</div>
+        <div class="child thi">3</div>
+        <div class="child forth">4</div>
+      
+       
+    </div>
+</body>
+</html>

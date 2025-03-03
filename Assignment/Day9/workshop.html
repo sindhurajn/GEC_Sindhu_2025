@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="1style.css">
+    <style>
+        body {
+            background-color: #e5e5e5;
+        }
+        .workshop-section {
+            background-color: white;
+            padding: 20px;
+            margin: 0px 150px;
+        }
+        .workshop-img {
+            width: 90%;
+            height: 90;
+           
+        }
+        .btn-subscribe {
+            background-color: #7a3b3b;
+            color: white;
+            border-radius: 5px;
+            padding: 20px 20px;
+            border: none;
+        }
+        .btn-subscribe:hover {
+            background-color: #5a2b2b;
+        }
+        .show-more {
+            color: #7a3b3b;
+            text-decoration: none;
+            margin-left: 20px;
+            border-bottom: 1px solid #7a3b3b;
+        }
+    </style>
+</head>
+<body>
+        <!-- header -->
+        <header class="bg-main nav_section position-sticky top-0 z-3">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg py-2">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./herp.avif" alt="Ceramics" width="150px" height="40">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto w-100  mb-2 mb-lg-0">
+                            <div class="row w-100">
+                                <div
+                                    class="col-md-10 d-flex flex-lg-row flex-column justify-content-lg-end gap-3 justify-content-start align-items-lg-center align-items-start">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="shop.html">SHOP</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="./workshop.html">WORKSHOP</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./blog.html">BLOG</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./contact.html">CONTACT</a>
+                                    </li>
+
+                                </div>
+                                <div
+                                    class="col-md-2 d-flex justify-content-lg-end align-items-lg-center align-items-start justify-content-start">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+    
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+         <!-- hero section -->
+    <section class="hero d-flex justify-content-center align-items-center" style= " height: 30vh; background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%), url(./pot6.jpg);" >
+                    <div class="hero">
+                        <h1 style="color: white; font-size: 2.5rem; font-weight: bold;">Workshop</h1>
+                    </div>
+    </section>
+    <!-- hero section end -->
+
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="row workshop-section shadow-lg">
+            <!-- Image Section -->
+            <div class="col-md-6">
+                <img src="./pot5.jpg" class="workshop-img" alt="Workshop Image">
+            </div>
+            
+            <!-- Text Content -->
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h2 class="fw-bold">Online Workshops</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum sapien ac sapien vestibulum posuere. 
+                    Praesent congue dui nec lectus tincidunt elementum. Donec viverra a neque vel egestas.
+                </p>
+                
+                <div>
+                    <button class="btn-subscribe">Subscribe</button>
+                    <a href="#" class="show-more">Show more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="row workshop-section shadow-lg">
+            <!-- Text Content -->
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h2 class="fw-bold">Workshops for adults</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum sapien ac sapien vestibulum posuere. 
+                    Praesent congue dui nec lectus tincidunt elementum. Donec viverra a neque vel egestas.
+                </p>
+                <div>
+                    <button class="btn-subscribe">Subscribe</button>
+                    <a href="#" class="show-more">Show more</a>
+                </div>
+            </div>
+             <!-- Image Section -->
+             <div class="col-md-6">
+                <img src="./pot6.jpg" class="workshop-img" alt="Workshop Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="row workshop-section shadow-lg">
+            <!-- Image Section -->
+            <div class="col-md-6">
+                <img src="./pot7.jpg" class="workshop-img" alt="Workshop Image">
+            </div>
+            
+            <!-- Text Content -->
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h2 class="fw-bold">Workshops for children</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum sapien ac sapien vestibulum posuere. 
+                    Praesent congue dui nec lectus tincidunt elementum. Donec viverra a neque vel egestas.
+                </p>
+                
+                <div>
+                    <button class="btn-subscribe">Subscribe</button>
+                    <a href="#" class="show-more">Show more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="row workshop-section shadow-lg">
+            <!-- Text Content -->
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h2 class="fw-bold">Workshops for companies</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum sapien ac sapien vestibulum posuere. 
+                    Praesent congue dui nec lectus tincidunt elementum. Donec viverra a neque vel egestas.
+                </p>
+                <div>
+                    <button class="btn-subscribe">Subscribe</button>
+                    <a href="#" class="show-more">Show more</a>
+                </div>
+            </div>
+             <!-- Image Section -->
+             <div class="col-md-6">
+                <img src="./pot8.jpg" class="workshop-img" alt="Workshop Image" height="300px">
+            </div>
+        </div>
+    </div>
+
+     <!-- footer section start -->
+ <footer class="footer section  shadow-lg" style="background: url(./image/backgr.jpg)">
+    <div class="container-fluid">
+        <div class="container">
+            
+            <div class="a-links" style="background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%);">
+                <div class="d-flex justify-content-center align-items-center gap-5 mb-4">
+                    <a href="#">02-233 Warszawa</a>
+                    <a href="#">email@contact.com</a>
+                    <a href="#">Store Regulation</a>
+                    <a href="#">Delivery</a>
+                    <div class="social-icons ">
+                        <div class="d-flex justify-content-center align-items-center gap-5">
+                            <i class="fa-brands fa-facebook" style="font-size: larger; color: rgb(121, 253, 132);"></i>
+                            <i class="fa-brands fa-twitter" style="font-size: larger; color: rgb(121, 253, 132);"></i>
+                            <i class="fa-brands fa-instagram" style="font-size: larger; color: rgb(121, 253, 132);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-links">
+                    <div class="d-flex justify-content-center align-items-center gap-5 mb-4">
+                        <a href="#">AI.Jerozolimskie 12</a>
+                        <a href="#">+12 500 500 500</a>
+                        <a href="#">privacy policy</a>
+                        <a href="#">Returns&exchanges</a>
+                        <div class="social-icons ">
+                            <div class="d-flex justify-content-center align-items-center gap-5">
+                                <i ></i>
+                                <i ></i>
+                                <i ></i>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <div class="subtle d-flex justify-content-center last-footer" style="color: white; background-color: rgb(32, 31, 31);">
+            <p>A website created in the WebWave website builder.</p>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>

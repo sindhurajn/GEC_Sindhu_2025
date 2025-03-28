@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramics contact</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="1style.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .contact-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        .social-icons a {
+            margin-right: 10px;
+            color: #333;
+            font-size: 20px;
+        }
+        .btn-send {
+            background-color: #7a3b3b;
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            border: none;
+            width: 100%;
+        }
+        .btn-send:hover {
+            background-color: #5a2b2b;
+        }
+        iframe {
+            width: 70%;
+            height: 350px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+        <!-- header -->
+        <header class="bg-main nav_section position-sticky top-0 z-3">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg py-2">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./Images/logo.webp" alt="Ceramics" width="80px" height="40">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto w-100  mb-2 mb-lg-0">
+                            <div class="row w-100">
+                                <div
+                                    class="col-md-10 d-flex flex-lg-row flex-column justify-content-lg-end gap-3 justify-content-start align-items-lg-center align-items-start">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="./home.html">HOME</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link " aria-current="page" href="./shop.html">SHOP</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./workshop.html">WORKSHOP</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./blog.html">BLOG</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="./contact.html">CONTACT</a>
+                                    </li>
+
+                                </div>
+                                <div
+                                    class="col-md-2 d-flex justify-content-lg-end align-items-lg-center align-items-start justify-content-start">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+    
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero d-flex justify-content-center align-items-center" style= " height: 30vh; background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%), url(./Images/pot15.jpg);" >
+            <div class="hero">
+                <h1 style="color: white; font-size: 2.5rem; font-weight: bold;">Contact</h1>
+            </div>
+</section>
+<div class="container my-5 p-5">
+    <div class="row d-flex justify-content-center align-items-center">
+        <!-- Contact Info -->
+        <div class="col-md-6">
+            <h3>Contact us</h3>
+            <p>02-233 Warszawa</p>
+            <p>Al. Jerozolimskie 12</p>
+            <p><strong>Email:</strong> email@contact.com</p>
+            <p><strong>Phone:</strong> +48 500 500 500</p>
+            
+            <!-- Social Media -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook" style="font-size: larger; color: rgb(121, 253, 132);"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter" style="font-size: larger; color: rgb(121, 253, 132);"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" style="font-size: larger; color: rgb(121, 253, 132);"></i></a>
+            </div>
+
+            <h4 class="mt-4">Collaboration</h4>
+            <p>m.kowalski@contact.com</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-6">
+            <form>
+                <div class="mb-2">
+                    <label class="form">Name:</label>
+                    <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="mb-2">
+                    <label class="form">Email:</label>
+                    <input type="email" class="form-control" placeholder="Your e-mail">
+                </div>
+                <div class="mb-3">
+                    <label class="form">Message:</label>
+                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn-send">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="row mt-4">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31098.893971483816!2d76.08338509950335!3d13.012620487597758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba548230ba42747%3A0xb0db4fb6b7a1f53f!2sHassan%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1740923435653!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+     <!-- footer section start -->
+ <footer class="footer section  shadow-lg" style="background: url(./image/backgr.jpg)">
+    <div class="container-fluid">
+        <div class="container">
+            
+            <div class="a-links" style="background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%);">
+                <div class="d-flex justify-content-center align-items-center gap-5 mb-4">
+                    <a href="#">02-233 Warszawa</a>
+                    <a href="#">email@contact.com</a>
+                    <a href="#">Store Regulation</a>
+                    <a href="#">Delivery</a>
+                    <div class="social-icons ">
+                        <div class="d-flex justify-content-center align-items-center gap-5">
+                            <i class="fa-brands fa-facebook" style="font-size: larger; color: rgb(121, 253, 132);"></i>
+                            <i class="fa-brands fa-twitter" style="font-size: larger; color: rgb(121, 253, 132);"></i>
+                            <i class="fa-brands fa-instagram" style="font-size: larger; color: rgb(121, 253, 132);"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="a-links">
+                    <div class="d-flex justify-content-center align-items-center gap-5 mb-4">
+                        <a href="#">AI.Jerozolimskie 12</a>
+                        <a href="#">+12 500 500 500</a>
+                        <a href="#">privacy policy</a>
+                        <a href="#">Returns&exchanges</a>
+                        <div class="social-icons ">
+                            <div class="d-flex justify-content-center align-items-center gap-5">
+                                <i ></i>
+                                <i ></i>
+                                <i ></i>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <div class="subtle d-flex justify-content-center last-footer" style="color: white; background-color: rgb(32, 31, 31);">
+            <p>A website created in the WebWave website builder.</p>
+        </div>
+    </div>
+</footer>
+<!-- footer section end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+</body>
+</html>

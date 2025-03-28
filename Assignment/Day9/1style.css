@@ -7,13 +7,19 @@
 .hero-section {
     height: 100vh;
     background-color: rgb(195, 202, 208);
-    background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%), url(./pot1.avif);
+    background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%), url(./Images/pot1.avif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     text-align: center;
 }
+
+/* .nav-link[aria-current="page"] {
+    font-weight: bold;
+    color: #555;
+    border-bottom: 2px solid black;
+} */
 
 .hero-section .hero-heading {
     font-size: 4rem;
@@ -238,3 +244,14 @@ body {
     height: auto;
     border-radius: 10px;
 }
+
+.story-section{
+    /* width: 50vw; */
+    height: 80vh;
+    background: rgb(222,226,233);
+    background: radial-gradient(circle, rgba(222,226,233,1) 0%, rgba(7,14,31,0.7596288515406162) 0%), url(./Images/pot11.jpg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }

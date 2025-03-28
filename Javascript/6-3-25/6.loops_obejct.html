@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops in Objects</title>
+  </head>
+  <body>
+    <h1>Loops in obj</h1>
+    <p>1. for in</p>
+    <p>2. Object.keys()</p>
+
+    <script>
+      const obj = {
+        name: "Varshini C",
+        age: 20,
+        adress: "Hassan",
+      };
+
+      //   1. for in loop
+      for (let i in obj) {
+        console.log(i);
+        //2 ways
+        console.log(obj[i]);
+        // console.log(obj[`${i}`]);
+        // console.log(obj.i); //this doesnt work because it treats i as key and seaches it in the object
+      }
+
+      //2. Object.keys()
+
+      const obj1 = {
+        name: "Varshini C",
+        age: 20,
+        adress: "Hassan",
+      };
+      //   to print keys of the object
+      const res = Object.keys(obj1);
+      console.log("the result is :", res); // prints in array format
+
+      //   to print seperately we use for of loop
+      for (let item of res) {
+        console.log(obj1[item]);
+      }
+    </script>
+  </body>
+</html>

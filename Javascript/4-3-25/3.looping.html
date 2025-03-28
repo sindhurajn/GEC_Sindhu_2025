@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loing startement</title>
+  </head>
+  <body>
+    <h1>Looping statemnt</h1>
+    <p>
+      for loop- for(initialization):{initialize; condition; increment/decrement}
+    </p>
+    <p>while loop- ini ex: i=10; while(condition){code inc/dec}</p>
+    <p>do while-</p>
+    <p>for in</p>
+    <p>for of 
+      <pre>
+        for(let item of iterable){
+          //code
+        }
+      </pre>
+    </p>
+
+    <!-- do while -->
+    <pre>
+      //ini
+      do{
+        //code
+        //ini/dec
+      }while(condition);
+     </pre
+    >
+
+    <script>
+      // ?for loop
+      //   let array1 = ["item1", "item2", "item3", "item4"];
+      //   for (let i = 0; i < 4; i++) {
+      //     console.log(array1[i]);
+      //   }
+
+      //   let array1 = ["item1", "item2", "item3", "item4"];
+      //   let len = array1.length;
+      //   console.log(len);
+      //   for (let i = 0; i < len; i++) {
+      //     console.log(array1[i]);
+      //   }
+
+        // while loop
+        // console.log("while loop");
+        // let array1 = ["item1", "item2", "item3", "item4"];
+        // let len = array1.length;
+        // let j = 0;
+        // while (j < array1.length) {
+        //   console.log(array1[j]);
+        //   j++; // j=j+1
+        // }
+
+      // let j = +prompt("Enter a number:");
+      // let array2 = "hello";
+
+      // while (j > 0) {
+      // console.log(array2);
+      // j--; // Decrease j by 1 in each loop
+
+
+  // do while loop
+      // let input_var = +prompt("enter a number0");
+
+      // console.log("do-while loop");
+      // let array3 = ["item1", "item2", "item3", "item4"];
+      // let k = 0;
+      // do {
+      //   console.log(array3[k]);
+      //   k++;
+      // } while (k < array3.length);
+
+      // do {
+      //   const input = +prompt("enter");
+      //   if (input === 20) {
+      //     break;
+      //   }
+      // } while (true);
+
+      // for of - gets incremneted itself and exits itself
+      // it prints items in array
+      console.log("For of loop");
+      let new_array=[12,23,44, 55, 44];
+      for(let item of new_array){
+        console.log(item);
+      }
+      
+
+      // for in loop
+      // it prints the index of the array
+      console.log("For in loop");
+      let array=[12,23,44, 55, 44];
+      for(let item in array){
+        console.log(item);
+      }
+
+      // to print the value of those index
+      console.log("to print the items of those indexes using for in loop");
+      for(let item in array){
+        console.log(array[item]);
+      }
+    </script>
+  </body>
+</html>

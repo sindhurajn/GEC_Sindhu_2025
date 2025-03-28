@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User inputt</title>
+  </head>
+  <body>
+    <h1>How to take user input</h1>
+    <p>prompt</p>
+    <br />
+    <script>
+      //   let name = prompt("Enter your name:");
+      //   console.log("Name is", name);
+      //   console.log("type of name", typeof name);
+
+      // add + before propmt to convert type into number otherwise it wuld be considered as string
+      //   let num = +prompt("Enter your num:");
+      //   console.log("num is", num);
+      //   console.log("type of num", typeof num);
+
+      day = +prompt("enter the day");
+      switch (day) {
+        case 1: {
+          console.log("Sunday");
+          break;
+        }
+        case 2: {
+          console.log("Monday");
+          break;
+        }
+        case 3: {
+          console.log("Tuesday");
+          break;
+        }
+        case 4: {
+          console.log("Wednesday");
+          break;
+        }
+        case 5: {
+          console.log("Thursday");
+          break;
+        }
+        case 6: {
+          console.log("Friday");
+          break;
+        }
+        case 7: {
+          console.log("Saturday");
+          break;
+        }
+        default: {
+          console.log("INVALID!");
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

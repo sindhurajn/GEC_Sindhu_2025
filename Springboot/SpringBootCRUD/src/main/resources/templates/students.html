@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /*background-color: #f4f4f4;*/ 
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+       .btn-success {
+            background-color: #d4ac6e;
+        }
+        
+        .btn-success-1 {
+            background-color: #28a745;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        
+        .btn-success:hover {
+        	background-color: #50394c;
+        }
+        
+        .btn-success-1:hover {
+        	background-color: #82b74b;
+        }
+        
+        .btn-danger:hover {
+        	background-color: #e0876a;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #034f84;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                display: none;
+            }
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Students List</h1>
+    <a th:href="@{/add-student}" class="btn-success">Add Student</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.id}" data-label="ID"></td>
+                <td th:text="${student.fName}" data-label="First Name"></td>
+                <td th:text="${student.lName}" data-label="Last Name"></td>
+                <td th:text="${student.email}" data-label="Email"></td>
+                <td th:text="${student.phone}" data-label="Phone"></td>
+                <td th:text="${student.address}" data-label="Address"></td>
+                <td>
+                    <a class="btn-success-1" th:href="@{/edit-student(id=${student.id})}" style="text-decoration: none;">Edit</a>
+                    <a class="btn-danger" th:href="@{/delete-student(id=${student.id})}" style="text-decoration: none;">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

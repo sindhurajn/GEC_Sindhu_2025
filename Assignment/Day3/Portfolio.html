@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+        body{
+            padding: 20px;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px auto;
+            width: 800px;
+        }
+      p {
+        font-size: 13px;
+        margin-top: 0px;
+      }
+
+      .main{
+        width: 50%;
+        /* margin: auto; */
+        white-space: wrap;
+      }
+      .search{
+        display: inline-block;
+        padding: 2px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .search input{
+        border: none;
+        outline: none;
+        font-size: 12px;
+        background: white;
+      }
+      .filter-button{
+        display: inline-block;
+        padding: 3px;
+        border-radius: 10px;
+        font-size: 12px;
+        margin-left: 6px;
+        border: 1px solid black;
+
+      }
+      .add-filter{
+        display: inline-block;
+        font-size: 12px;
+        color: grey;
+        margin: 5px;
+      }
+
+      .skill-container{
+        display: table;
+        width: 100%;
+      }
+
+    /* .skill-box{
+        display: inline-block;
+        width: 50%;
+        padding: 5px;
+        /* margin: 3px 3px 3px 3px; */
+        /* border: 1px;
+        border: 8px solid grey;
+        text-align: left;
+        font-weight: 600; */ 
+    /* } */
+    .skill-row{
+        display: table-row;
+        /* margin-bottom: 3px 3px 3px 3px ; */
+    }
+    .skill-card{
+        display: inline-block;
+        padding: 10px;
+        border-radius: 2px ;
+        border: 1px solid rgb(190, 185, 185);
+        text-align: center;
+        font-size: 14px;
+        margin: 5px 0px 5px 5px ;
+        box-sizing: border-box;
+        box-shadow: 0px 2px 2px 0px grey;
+        width: calc(50% - 8px);
+    }
+    </style>
+  </head>
+  <body>
+    <img
+      src="./profile.jpg"
+      alt="image not found"
+      width="150px"
+      height="130px"
+      style="margin-left: 0px"
+    />
+
+    <h2 style="font-size: 20px">Avron</h2>
+    <h4 style="font-size: 15px; font-family: 'Times New Roman', Times, serif">
+      <b>Product Designer & Notion creator</b>
+    </h4>
+    <hr />
+    <p>+0473492739</p>
+    <p>yourname@domain.com</p>
+    <p><a href="#">www.website.com</a></p>
+    <p>anytown, CA 12345</p>
+    <hr />
+
+    <h4 style="font-size: 15px"><b>ABOUT ME</b></h4>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ut fuga
+      quaerat, itaque voluptatibus cupiditate modi repellat, necessitatibus
+      ullam rerum quisquam non repellendus facere? Perspiciatis quam explicabo
+      facere reprehenderit libero assumenda voluptatum consequuntur
+      exercitationem iste eius vel doloribus inventore, repudiandae quaerat
+      aspernatur magni qui, rem beatae! Ipsam atque dicta temporibus.
+    </p>
+    <hr>
+    <h5><i class="fa-solid fa-angles-up"></i> &nbsp;
+       
+        Skills <button><i class="fa-solid fa-caret-down"></i></button>
+        <i class="fa-solid fa-up-right-and-down-left-from-center" style="float: right; color: grey;" ></i>
+        <i class="fa-solid fa-ellipsis" style="float: right; margin-right: 8px;"></i>
+    </h5>
+    <hr>
+    <div class="main">
+        <div class="search">
+        <i class="fa-solid fa-magnifying-glass" ></i> <input type="search" placeholder="Search"> 
+        </div>  
+        <div class="filter-button">
+            <i class="fa-regular fa-circle-dot" style="color: blue;"></i> Type: Skills <i class="fa-solid fa-caret-down" style="color: grey;"></i>
+        </div> 
+        <div class="add-filter">+ Add filter</div>        
+    </div>
+
+    <div class="skill-container">
+        <div class="skill-row">
+            <div class="skill-card">Collaboration</div>
+            <div class="skill-card">Communication</div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-card">Creativity</div>
+            <div class="skill-card">Critical Thinking</div>
+        </div>
+        <div class="skill-row">
+            <div class="skill-card">Empathy</div>
+            <div class="skill-card">Time Management</div>
+        </div>
+    </div>
+    
+    <hr>
+    <h4 style="font-size: 15px;">ACADEMIC BACKGROUND</h4>
+    <h5 style="font-size: 12px;">University</h5>
+    <p style="font-size: 12px;">Bachelor degree 20XX - 20XX</p>
+    
+    <hr>
+  </body>
+</html>

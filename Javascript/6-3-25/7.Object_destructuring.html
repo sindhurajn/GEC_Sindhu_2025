@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Object destructuring</title>
+</head>
+
+<body>
+  <h1>Object destructuring</h1>
+  <p>1. spread operator(...)</p>
+
+  <script>
+    const obj1 = {
+      name: "Varshini C",
+      age: 20,
+      gender: "female",
+      adress: "Hassan",
+    };
+    console.log(obj1);
+    //   for array its [] and for object {} is used for destructuring
+    //   const { name, age, gender, adress } = obj1;
+    //   console.log(name);
+    //   console.log(age);
+    //   console.log(gender);
+    //   console.log(adress);
+
+    const { name, ...rest } = obj1;
+    console.log(name);
+    console.log(rest);
+
+    //renaming variables
+    const { name: Name } = obj1;
+    console.log(Name); // Varshini C
+  </script>
+</body>
+
+</html>

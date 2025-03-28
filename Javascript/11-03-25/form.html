@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration Form</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+</head>
+<body>
+    <div class="container shadow">
+        <div class="row mt-5 justify-content-center">
+            <div col-12 col-sm-8 col-lg-6>
+                <h1>Registration Form</h1>
+                <form action="#" id="registration_form" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label><input type="name" class="form-control" name="name" id="name" placeholder="Enter your name">
+                        <span id="nameError" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email">
+                        <span id="emailError" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label><input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                        <span id="PasswordError" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="conform_password" class="form-label">Conform Password</label><input type="password" class="form-control" name="conform_password" id="conform_password" placeholder="Re_enter your password">
+                        <span id="PasswordError1" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label><textarea type="text" class="form-control" name="Address" id="address" placeholder="enter your Address"></textarea>
+                        <span id="addressError" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pincode" class="form-label">pincode</label><input type="number" class="form-control" name="pincode" id="pincode" placeholder="enter your pincode">
+                        <span id="pincodeError" class="text-danger"></span>
+                    </div>
+                    <input type="submit" name="submit" id="submit">
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const registration_form = document.querySelector("#registration_form");
+            registration_form.addEventListener("submit", (e) =>{
+                e.preventDefault();
+
+                const showError = (eleId, text)=>{
+                    document.getElementById(eleId).textContent =text            
+                };
+                const clearError = (eleId) =>{
+                    document.getElementById(eleId).textContent = "";
+                }
+
+                const formValid = () =>{
+                    let isvalid = true;
+                    const name = document.querySelector("#name").value.trim();
+                    const email = document.querySelector("#email").value.trim();
+                    const password = document.querySelector("#password").value;
+                    const conform_password = document.querySelector("#conform_password").value;
+                    const address = document.querySelector("#address").value.trim();
+                    const pincode = document.querySelector("#pincode").value.trim();
+
+
+                    if(name === ""){
+                        showError("nameError","Name Field is required");
+                        isvalid = false;
+                    }
+                    else if(name.length<3){
+                        showError("nameError","Name should more than 3 letter")
+                        isvalid = false;
+                    }
+                    else{
+                        clearError("nameError");
+                        isvalid = true;
+                    }
+
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    
+                    if(email === ""){
+                        showError("emailError","email Field is required");
+                        isvalid = false;
+                    }
+                    else if(!emailPattern.test(email)){
+                        showError("emailError","email should be in correct formate")
+                        isvalid = false;
+                    }
+                    else{
+                        clearError("emailError");
+                        isvalid = true;
+                    }
+
+                    const passwordPattern =/^(?=.[A-Z])(?=.[a-z])(?=.[@$%!?&])[A-Za-z\d@#$%^&*?!]{8,}$/;
+                    if(password === ""){
+                        showError("PasswordError","password Field is required");
+                        isvalid = false;
+                    }
+                    else if(!passwordPattern.test(password)){
+                        showError("PasswordError","password conatine atleatst one lowercase one uppercase and onepescial Character minimum 8 Character")
+                        isvalid = false;
+                    }
+                    else{
+                        clearError("PasswordError");
+                        isvalid = true;
+                    }
+                    if(conform_password === ""){
+                        showError("PasswordError1","conform password Field is required");
+                        isvalid = false;
+                    }
+                    else if(conform_password !== password){
+                        showError("PasswordError1","conform password should match with password")
+                        isvalid = false;
+                    }
+                    else{
+                        clearError("PasswordError1");
+                        isvalid = true;
+                    }
+
+                    if(address === ""){
+                        showError("addressError","Address Field is required");
+                        isvalid = false;
+                    }
+                    // else if(address.length < 10){
+                    //     showError("addesssError","Address is should be more than 10 letter")
+                    //     isvalid = false;
+                    // }
+                    else{
+                        clearError("addressError");
+                        isvalid = true;
+                    }
+                    if(pincode === ""){
+                        showError("pincodeError","pincode  Field is required");
+                        isvalid = false;
+                    }
+                    else{
+                        clearError("pincodeError");
+                        isvalid = true;
+                    }
+
+
+
+                    return isvalid;
+                }
+                if(formValid()){
+                    alert("Form submitted suceesfully");
+                    registration_form.submit();
+                }
+            })
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

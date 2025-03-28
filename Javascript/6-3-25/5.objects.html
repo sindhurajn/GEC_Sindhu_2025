@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h1>Objects</h1>
+
+    <script>
+      // function:
+      const car_obj = {
+        carName: "Bugatti",
+        type: "EV",
+        wheels: 4,
+        "four Seat": true,
+        speed: function () {
+          console.log("The bugatti is moving in soeed of 80km/h");
+        },
+      };
+      console.log(car_obj);
+      console.log(car_obj.carName);
+      console.log(car_obj.type);
+      car_obj.speed();
+      console.log(car_obj["four Seat"]);
+
+      // adding a property:
+      car_obj.color = "red";
+      console.log("Car Object:", car_obj);
+
+      // cloning after adding a property
+      new_obj = { ...car_obj };
+      console.log(new_obj);
+
+      // deleting a object
+      delete car_obj.color;
+      console.log("After deleting", car_obj);
+    </script>
+  </body>
+</html>

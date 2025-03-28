@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block and function scope</title>
+  </head>
+  <body>
+    <h1>Block and function scope</h1>
+    <p>1. Block scope- {} (let and const)</p>
+    <p>2. Function scope - function function_name{} (var)</p>
+
+    <script>
+      // var is function scope - when we give diff value to var inside if: outside of the if i.e throught the function its the same number
+      // let and const is block scope -  when we give diff value to let inside if: outside of the if i.e throught the function its the first number we gave . but its same throught the block that is the if block
+      function scope() {
+        var num = 10;
+        let num2 = 100;
+        if (true) {
+          var num = 100;
+          let num2 = 200;
+          console.log("The number inside is when its var :" + num); //100
+          console.log("The number inside is when its let : " + num2); //200
+        }
+        console.log("The number is outside when its var:" + num); //100
+        console.log("The number is outside when its let:" + num2); //100
+      }
+      scope();
+    </script>
+  </body>
+</html>

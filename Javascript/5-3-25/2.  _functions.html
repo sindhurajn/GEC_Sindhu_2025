@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <titlefunctions></title>
+  </head>
+  <body>
+    <h1>Functions</h1>
+    <p>Functions is used to perform a specific function. It is used because of its reusability(dont need to write the code once agin we can call many times) called dry(dont repeat yourself)</p>
+    <br>
+    <p>Can declare function in 3 ways</p>
+    <br>
+    <p>1. function declaration
+      Syntax: 
+      <pre>function functon_name(para){
+        //code
+      }
+      //call the function:
+    function_name();</pre>
+    </p>
+    <br>
+    <p>2. function expression
+      <p>
+        <pre>
+          const function_name = function(parameters){
+            //code
+          }
+          //call
+          function_name(arg);
+        </pre>
+      </p>
+    </p>
+
+    <br>
+
+
+    <p>3. arrow function
+      <p>
+        <pre>
+          const function_name= (para) =>{
+            //code
+          }
+          //call function
+          function_name();
+        </pre>
+      </p>
+    </p>
+    <br>
+    <br>
+    <br>
+    <h1>4 Types of fuctions</h1>
+    <p>1. function accepting a parameter and not returning a value</p>
+    <p>2. function accepting a parameter and returning a value</p>
+    <p>3. function not accepting a parameter and not returning a value</p>
+    <p>4. function not ccepting a parameter and returning a value</p>
+
+    <!-- script for function declaration -->
+    <!-- <script>
+      // 1. How to declare a function
+
+      // function declaration
+      function display(){
+        console.log("This is display function");
+      }
+      // function call
+      display();
+// ____________________________________
+
+  
+      // 1.  function accepting a parameter and not returning a value
+      // its just printing 23 but not returning the value 23
+      function para_not_ret(number){ //number is a parameter
+        console.log(`The given number is ${number}`);
+      }
+      para_not_ret(1); //1 is a argument
+
+      // 2. function accepting a parameter and returning a value
+      function para_return(string){
+        return string;
+      }
+      const result =para_return("returns");
+      console.log(`The string is ${result}`);
+
+      // ____________________________________________________
+
+      function para_return(num){
+        return num;
+      }
+      const res = para_return(233);
+      console.log(`The string is ${res}`);
+
+      // 3. function not accepting a parameter and not returning a value
+      function not_para_not_return(){
+        console.log("This is 3rd type of function");
+      }
+      not_para_not_return();
+
+      // 4. function not accepting a parameter and returning a value
+      function not_para_return(){
+          return 345;
+      }
+      const resul=not_para_return();
+      console.log(`The result is ${resul}`);
+
+      
+
+      // even or odd:
+      function even_odd(num){
+        if(num==0){
+          console.log(`The ${num} is neither even nor odd`);
+        }else if(num%2==0){
+          console.log(`The ${num} is even`);
+        }else{
+          console.log(`The ${num} is odd`);
+        }
+        return num;
+      }
+      even_odd(0);
+
+      // another way:
+      function iseven(num){
+        return num%2===0;
+      }
+      const resu1 = iseven(30);
+      if(resu1 === true){
+        console.log("Even number");
+      }else{
+        console.log("Odd number");
+      }
+     
+    </script> -->
+<br>
+    <!-- script for function expression -->
+    <!-- <script>
+      //2. function expression
+      const display = function(){
+        console.log("This is display function");
+      }
+      display();
+
+      // 1.  function accepting a parameter and not returning a value
+      // its just printing 23 but not returning the value 23
+      const para_not_ret =function(number){ //number is a parameter
+        console.log(`The given number is ${number}`);
+      }
+      para_not_ret(1); //1 is a argument
+
+      // 2. function accepting a parameter and returning a value
+      const para_retur=function (string){
+        return string;
+      }
+      const result =para_retur("returns");
+      console.log(`The string is ${result}`);
+
+      // ____________________________________________________
+
+      const para_return = function(num){
+        return num;
+      }
+      const res = para_return(233);
+      console.log(`The num is ${res}`);
+
+      // 3. function not accepting a parameter and not returning a value
+      const not_para_not_return=function(){
+        console.log("This is 3rd type of function");
+      }
+      not_para_not_return();
+
+      // 4. function not accepting a parameter and returning a value
+      const not_para_return=function (){
+          return 345;
+      }
+      const resul=not_para_return();
+      console.log(`The result is ${resul}`);
+    </script> -->
+  
+<br>
+    <!-- script for arrow function  -->
+   <script>
+    // Arrow function
+    const display=()=>{
+      console.log("This is display arrow function");
+    }
+    display();
+
+    
+
+    // 1.  function accepting a parameter and not returning a value
+      const para_not_ret = (number)=>{ //number is a parameter
+        console.log(`The given number is ${number}`);
+      }
+      para_not_ret(1); //1 is a argument
+
+      // 2. function accepting a parameter and returning a value
+      const para_retur=(string)=>{
+        return string;
+      }
+      const result =para_retur("returns");
+      console.log(`The string is ${result}`);
+
+      // ____________________________________________________
+
+      const para_return=(num)=>{
+        return num;
+      }
+      const res = para_return(233);
+      console.log(`The string is ${res}`);
+
+      // 3. function not accepting a parameter and not returning a value
+      const not_para_not_return=()=>{
+        console.log("This is 3rd type of function");
+      }
+      not_para_not_return();
+
+      // 4. function not accepting a parameter and returning a value
+      const not_para_return=()=>{
+          return 345;
+      }
+      const resul=not_para_return();
+      console.log(`The result is ${resul}`);
+
+      
+   </script>
+  </body>
+</html>

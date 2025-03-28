@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math</title>
+  </head>
+  <body>
+    <h1>Math</h1>
+
+    <script>
+      // Math library
+      //   js is case sensitive
+      console.log(Math);
+      console.log(typeof Math);
+      //
+      console.log(Math.PI);
+      let var1 = 49;
+      console.log("Sqaure root, sqrt of 49:", Math.sqrt(var1));
+
+      console.log("2^3:", Math.pow(2, 3));
+
+      // round up to previous number
+      console.log("floor:", Math.floor(3.55)); // rounding off of a number to prev number- 3(prev number)
+      console.log("floor:", Math.floor(3.99)); // rounding off of a number- 3
+      console.log("floor:", Math.floor(3.999999999999999999999999999999999999)); // round off of a number- 4
+      console.log("floor:", Math.floor(-2.44)); //-3 - the previous number
+
+      // rounds up to next one
+      console.log("Ceil", Math.ceil(3.1)); //4- the rounds up to next number
+      console.log("Ceil", Math.ceil(-6.91)); //-6
+
+      //rounds up as normal number does
+      console.log("Round:", Math.round(2.3)); //2
+      console.log("Round:", Math.round(21.8)); //22
+      console.log("Round:", Math.round(-21.8)); //-22
+
+      // random
+      console.log("random:", Math.random()); //random numbers from 0 to 1
+      // to get random numbers from 0-10.. since multiplied by 11 till 11 excluding 11
+      console.log("random:", Math.floor(Math.random() * 11));
+
+      // now to get random numbers from 1 to 10
+      console.log("random", math.ceil(math.random() * 10));
+      console.log("random", math.floor(math.random() * 10)) + 1;
+    </script>
+  </body>
+</html>

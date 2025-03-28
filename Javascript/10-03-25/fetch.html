@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fetch Example</h1>
+    <!-- <p>for fetching user input in the backend andd display in frontend</p> -->
+    <div id="divtag"></div>
+    <script>
+        const url = "https://jsonplaceholder.typicode.com/posts";
+        const getUsers = async (url) => {
+            const res = await fetch(url);
+            console.log(res);
+            const jsonRes = await res.json();
+            console.log(jsonRes);
+            jsonRes.forEach((curEle) => {
+                // document.getElementById("divtag").innerHTML += `<p>${curEle.userId}<p>`
+                const response = document.createElement("div"); 
+                const htag = document.createElement("h1");
+                htag.textContent = `${curEle.id}`
+                response.append(htag);
+                const ptag1 = document.createElement("p");
+                htag.textContent = `${curEle.title}`
+                response.append(ptag1); 
+                const ptag2 = document.createElement("div");
+                htag.textContent = `${curEle.body}`
+                response.append(ptag2);
+                document.getElementById("divtag").append(response);
+            });
+        }
+        getUsers(url);
+    </script>
+</body>
+</html>

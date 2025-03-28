@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Events in JS</h1>
+    <p>1.Mouse Event</p>
+    <p>2.keyboard event</p>
+    <p>3.form Event</p>
+    <p>4.window Event</p>
+    <p>5.document Event</p>
+    <p>6.clipboard Event</p>
+    <p>7.Media Event</p>
+    <h1 id="htag">hello HTML</h1>
+    <!-- <button type="button" onclick="handleClick()">click me</button> //instead of giving onclick in the html -->
+    tag,we use addEventListner
+    <button type="button" id="btn">button</button>
+
+    <!-- keyboard event -->
+     <input type="text " id="inputag" placeholder="name">
+     <p id="keytag"></p>
+
+     <!-- form event  -->
+      <h1>Form event</h1>
+      <!-- <input type="text " id="username" placeholder="name">
+       <p id="result"></p> 
+       to append the ptag value 
+      <p id="result">hello</p>  -->
+
+      <input type="text " id="username" placeholder="enter a text">
+      <select name="select" id="number">
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <p id="result">hello</p>
+
+      <form action="" id="contactform">
+
+          <input type="text" id="name" placeholder="name">
+          <input type="email" id="email" placeholder="mail id">
+          <textarea name="message" id="message"></textarea>
+          <button type="submit" id="">submit</button>
+        </form>
+    
+
+
+    <script>
+        // //1.mouse Event
+        // const handleClick = () => {
+        //     const var1 = document.querySelector("htag");
+        //     var1.textContent = "hello js";
+        // }
+
+        //addEventListner
+        // const btn1 = document.querySelector("#btn");
+        // const var1 = document.querySelector("#htag");
+        // btn1.addEventListener("click", () => {
+        //     var1.textContent = "hello js";
+        // })
+
+        //mouseover
+        const btn1 = document.querySelector("#btn");
+        const var1 = document.querySelector("#htag");
+        // btn1.addEventListener("mouseover", () => {
+        //     var1.textContent = "hello js";
+        // })
+
+        //mouseout
+
+        // btn1.addEventListener("mouseout", () => {
+        //     var1.textContent = "hello css";
+        // })
+
+        //mouseup
+
+        // btn1.addEventListener("mouseup", () => {
+        //     var1.textContent = "hello ";
+        // })
+
+        //mousedown
+        // btn1.addEventListener("mousedown", () => {
+        //     var1.textContent = "hello java";
+        // })
+
+        //double click
+        btn1.addEventListener("dblclick", () => {
+            var1.textContent = "hello python";
+        })
+
+        //Keyboardn Event
+
+        // btn1.addEventListener("key", () => {
+            // var1.textContent = "hello css";
+        // })
+        document.getElementById("inputag").addEventListener("keypress", (event) => {
+            document.getElementById("keytag").textContent = "you pressed" + event.key
+        })
+
+        // Form Events
+        // // 1. input 
+        // const username = document.querySelector("#username");
+        // const result = document.querySelector("#result");
+        // username.addEventListener("input", () => {
+        //     // result.innerText = username.value;
+        //     result.innerText += username.value; //to append the ptag value
+        // })
+        // for user giving input 
+
+        // blur
+        const username = document.querySelector("#username");
+        const result = document.querySelector("#result");
+        username.addEventListener("blur", () => {
+            result.innerText = username.value;
+            // when user give input and is pressed outside that field that value will be saved ex: we give email and then when we cick on password it will saved and visible in that field
+            
+        })
+
+        // focus
+        username.addEventListener("focus", () => {
+            console.log("user pressed");
+            // here even if user  dosent give input just click also it will show in console
+        })
+        document.querySelector("#number").addEventListener("change", () => {
+            console.log("select input field is change");
+        })
+
+        // 2. Contact form
+        const contactform = document.querySelector("#contactform");
+        contactform.addEventListener("submit", (event) => {
+            event.preventDefault();
+            console.log("hello");
+        })
+
+
+
+
+    </script>
+</body>
+</html>

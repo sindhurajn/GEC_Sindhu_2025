@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Array methods</title>
+</head>
+
+<body>
+  <h1>Array methods</h1>
+  <p>1. foreach</p>
+  <p>2. map</p>
+  <p>3. filter</p>
+  <p>4. reduce</p>
+  <p>5. sort</p>
+  <p>6. splice (start, delete, insert)</p>
+  <p>7. each</p>
+  <p>8. some</p>
+
+  <script>
+    const array1 = [1, 2, 3, 4, 5, 6];
+
+    // 1. for each:
+    //in this method foreach takes a parameter and that parameter is a function(usually arrow function is used).. its like call backfunction inside function
+    //syntax inside it is current elemnt , index , array- index and array is optional
+    //   can perform operations inside cconsole.log
+    array1.forEach((curEle, index, array) => {
+      console.log(curEle * curEle, "index is :", index, "array is ", array);
+    });
+
+    //   real world eg:
+
+    const users = [
+      { Name: "Varsha", age: 21, adress: "hassan" },
+      { Name: "Sanjay", age: 19, adress: "hassan" },
+      { Name: "Hema", age: 48, adress: "hassan" },
+      { Name: "Latha", age: 48, adress: "hassan" },
+    ];
+    users.forEach((curEle) => {
+      console.log(curEle.Name);
+    });
+
+    //   _______________
+
+    //2. map:
+    // syntax is same as of for each
+    // this creates seperate array and uses return
+    const array2 = [1, 2, 3, 4];
+    const array3 = array2.map((curEle, index, array) => {
+      return curEle * curEle;
+    });
+    console.log("array2 is :", array2);
+    console.log("array3 is :", array3);
+
+    //   real world example
+    const user = [
+      { Name: "Varsha", age: 21, adress: "hassan" },
+      { Name: "Sanjay", age: 19, adress: "hassan" },
+      { Name: "Hema", age: 48, adress: "hassan" },
+      { Name: "Latha", age: 48, adress: "hassan" },
+    ];
+    const data = user.map((ele) => {
+      return ele.Name;
+    });
+    console.log("user:", data);
+
+    //_______________________
+
+    //3. filter:
+    //filtering is used tp filter based on a condition as in given eg:
+    //returns an array that obeys the condition in the form of array
+    const array4 = [1, 2, 3, 4, 5, 6, 7, 8];
+    const array5 = array4.filter((curEle) => {
+      return curEle % 2 == 0;
+    });
+    console.log("array5:", array5);
+    //   ____________________________
+
+    // 4. reduce:
+    // reduce reduces the array into one number by performing the operation given into it
+    const array6 = [1, 2, 3, 4, 5];
+    const result = array6.reduce((previous, current) => {
+      return previous + current;
+    }, 10); // here we can give the previous no./starting number by ourselves which adds 10 to 15 i.e 10 is prev no. and 1 starts as current element...otherwise it wuld start by index 0 as the prev no. and index1 as current no.
+    console.log("The result is ", result);
+
+    //____________________________
+
+    //5. sort:
+    //arrange numbers in ascending(a-b) and descending order(b-a), and words alphabetically
+
+    //ascending order arrangemnt using sort
+    const array7 = [1, 2, 5, 4];
+    const array8 = array7.sort((a, b) => { return a - b })
+    console.log(array8);
+
+    //descending order arrangment of numbers using sort
+    const array = [1, 2, 5, 4];
+    const arra = array.sort((a, b) => b - a)
+    console.log(arra);
+
+    //words arrangement in alphabetical order :
+    const fruits = ["orange", "apple", "pineapple", "watermelon", "bananna"];
+    const fruits1 = fruits.sort();
+    console.log(fruits1);
+
+    //______________________________
+
+
+    // 6.splice:
+    //The splice() method in JavaScript modifies an array by adding, removing, or replacing elements.
+    //splice(startIndex, deleteCount, ...itemsToAdd)
+    //0: Start at index 0.
+    //2: Remove 2 elements (1 and 2).
+    //5: Insert 5 at index 0.
+    //and array 10 holds the deleted values 1 and 2
+    //array9 is modified to [5, 3, 4].
+    const array9 = [1, 2, 3, 4];
+    const array10 = array9.splice(0, 2, 5)
+    console.log("deleted elements", array10);
+    console.log("modified array", array9);
+
+    const arr1 = [10, 20, 30, 40, 50];
+    const removed = arr1.splice(1, 2); // Removes 2 elements starting from index 1
+    console.log("Removed:", removed); // Output: [20, 30]
+    console.log("Modified arr1:", arr1); // Output: [10, 40, 50]
+
+    //_________________________________
+
+    //7.each
+
+    // const array11 = [1, 2, 3, 4, 5];
+    // const array12 = array11.each(function (index, value) {
+    //   console.log(index, value);
+    // });
+
+    //8.some 
+    const array13 = [1, 2, 3, 5];
+    const array14 = array13.some(num => num > 3); // At least one number is >3 (5)
+    console.log("some:", array14); // Output: true
+
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

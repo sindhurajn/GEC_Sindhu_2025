@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap grid layout</title>
+    <!-- Bootstrap CSS -->
+    <link href="./bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="vh-100 d-flex flex-column bg-white">
+
+    <div class="container-fluid d-flex flex-column h-100">
+        <!-- Header -->
+        <div class="row gx-2">
+            <div class="col-12 gy-2">
+
+                <div class=" bg-light text-center py-3 border-bottom fw-semiold">Header</div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="row">
+            <div class="col-12 gy-2 bg-light text-center py-2 border-bottom fw-semibold">Navigation Menu</div>
+        </div>
+
+        <!-- Content Section (Expands to Fill Remaining Space) -->
+         <div class="container">
+        <div class="row gx-5">
+            <div class="col-3 gy-2 bg-light text-dark text-center border-end">
+               <div class="p-3">Content</div></div> 
+            <div class="col-3 gy-2 text-dark text-center ">
+                <div class="p-3">Main Content</div></div>
+            <div class="col-3 gy-2 text-center border-start">
+                <div class="p-3">Content</div></div> 
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <div class="row">
+            <div class="col-12 gy-2 text-center py-3 border-top fw-semibold ">Footer</div>
+        </div>
+        
+   
+
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

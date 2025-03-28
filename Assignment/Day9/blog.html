@@ -3,81 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ceramics blog</title>
+    <title>Ceramics</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="1style.css">
     <style>
         body {
-            background-color: #f5f5f5;
-            margin: 0px;
-            padding: 0px;
+            background-color: #e5e5e5;
         }
-        .blog-post {
-            margin-bottom: 40px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-        .blog-post img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .blog-post h4 {
-            font-weight: bold;
-        }
-        .blog-post a {
-            color: #7a3b3b;
-            text-decoration: none;
-        }
-        .sidebar {
+        .workshop-section {
+            background-color: white;
             padding: 20px;
-            border-radius: 10px;
-            height: 100%;
-            width: 80%;
+            margin: 0px 150px;
         }
-        .social-icons a {
-            margin-right: 10px;
-            color: #333;
-            font-size: 10px;
+        .workshop-img {
+            width: 90%;
+            height: 90;
+           
         }
-        .btn-send {
+        .btn-subscribe {
             background-color: #7a3b3b;
             color: white;
             border-radius: 5px;
-            padding: 10px;
+            padding: 20px 20px;
             border: none;
-            width: 100%;
         }
-        .btn-send:hover {
+        .btn-subscribe:hover {
             background-color: #5a2b2b;
         }
-
-        .carousel-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .blog-content {
-            text-align: center;
-            padding: 20px;
-        }
-        .blog-content h5 {
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .blog-content a {
+        .show-more {
             color: #7a3b3b;
             text-decoration: none;
-        }
-        .pagination .page-link {
-            color: #7a3b3b;
-            border: none;
-        }
-        .pagination .page-item.active .page-link {
-            background-color: #7a3b3b;
-            color: white;
+            margin-left: 20px;
+            border-bottom: 1px solid #7a3b3b;
         }
     </style>
 </head>
@@ -87,7 +46,7 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg py-2">
                 <div class="container">
                     <a class="navbar-brand" href="#">
-                        <img src="./herp.avif" alt="Ceramics" width="150px" height="40">
+                        <img src="./Images/logo.webp" alt="Ceramics" width="80px" height="40">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -99,6 +58,9 @@
                             <div class="row w-100">
                                 <div
                                     class="col-md-10 d-flex flex-lg-row flex-column justify-content-lg-end gap-3 justify-content-start align-items-lg-center align-items-start">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="./home.html">HOME</a>
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" aria-current="page" href="shop.html">SHOP</a>
                                     </li>
@@ -121,14 +83,14 @@
                                 </div>
                             </div>
                         </ul>
-    
+     
                     </div>
                 </div>
             </nav>
         </header>
 
          <!-- hero section -->
-    <section class="hero d-flex justify-content-center align-items-center" style= " height: 30vh; background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%), url(./pot5.jpg);" >
+    <section class="hero d-flex justify-content-center align-items-center" style= " height: 30vh; background: linear-gradient(90deg, rgba(23, 22, 22, 0.813) 13%, rgba(42, 41, 41, 0.567) 98%), url(./Images/pot4.webp);" >
                     <div class="hero">
                         <h1 style="color: white; font-size: 2.5rem; font-weight: bold;">Blog</h1>
                     </div>
@@ -142,7 +104,7 @@
                 <!-- Blog Post 1 -->
                 <div class="row blog-post">
                     <div class="col-md-4">
-                        <img src="./pot3.avif" alt="Ceramic Workshop" style="height: 30vh;">
+                        <img src="./Images/pot3.avif" alt="Ceramic Workshop" style="height: 30vh;">
                     </div>
                     <div class="col-md-8">
                         <h4>What affects the quality of ceramic products?</h4>
@@ -155,7 +117,7 @@
                 <!-- Blog Post 2 -->
                 <div class="row blog-post">
                     <div class="col-md-4">
-                        <img src="./pot4.webp" alt="How ceramics are made" style="height: 30vh;">
+                        <img src="./Images/pot4.webp" alt="How ceramics are made" style="height: 30vh;">
                     </div>
                     <div class="col-md-8">
                         <h4>How ceramics are made</h4>
@@ -170,7 +132,7 @@
             <div class="col-md-4 h2"  >
                 <div class="sidebar shadow">
                     <!-- Social Media -->
-                    <img src="./social.jpg" class="img-fluid rounded" alt="Social Media" style="height: 30vh;width: 30vw;">
+                    <img src="./Images/social.jpg" class="img-fluid rounded" alt="Social Media" style="height: 30vh;width: 30vw;">
                     <h5 class="mt-3 d-flex justify-content-center align-items-center" style="font-size: small" >Our social media</h5>
                     <div class="social-icons d-flex justify-content-center align-items-center">
                         <a href="#"><i class="fa-brands fa-facebook" style="font-size: large; color: rgb(79, 216, 131);"></i></a>
@@ -206,7 +168,7 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="./pot9.jpg" alt="Ceramic soup bowls">
+                            <img src="./Images/pot9.jpg" alt="Ceramic soup bowls">
                             <div class="blog-content">
                                 <h5>Ceramic soup bowls</h5>
                                 <p class="text-muted">17 August 2022</p>
@@ -215,7 +177,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="./pot10.jpg" alt="Ceramic quality">
+                            <img src="./Images/pot10.jpg" alt="Ceramic quality">
                             <div class="blog-content">
                                 <h5>What affects the quality of ceramic products?</h5>
                                 <p class="text-muted">17 August 2022</p>
@@ -224,7 +186,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="./pot11.jpg" alt="How ceramics are made">
+                            <img src="./Images/pot11.jpg" alt="How ceramics are made">
                             <div class="blog-content">
                                 <h5>How ceramics are made</h5>
                                 <p class="text-muted">17 August 2022</p>
@@ -239,7 +201,7 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="./pot12.jpg" alt="Handmade Pottery">
+                            <img src="./Images/pot12.jpg" alt="Handmade Pottery">
                             <div class="blog-content">
                                 <h5>Handmade Pottery</h5>
                                 <p class="text-muted">20 August 2022</p>
@@ -248,7 +210,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="./pot13.jpg" alt="Painting Ceramics">
+                            <img src="./Images/pot13.jpg" alt="Painting Ceramics">
                             <div class="blog-content">
                                 <h5>Painting Ceramics</h5>
                                 <p class="text-muted">22 August 2022</p>
@@ -257,7 +219,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img src="./pot14.jpg" alt="Ceramic Materials">
+                            <img src="./Images/pot14.jpg" alt="Ceramic Materials">
                             <div class="blog-content">
                                 <h5>Understanding Ceramic Materials</h5>
                                 <p class="text-muted">25 August 2022</p>

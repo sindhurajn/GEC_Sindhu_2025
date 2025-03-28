@@ -1,0 +1,157 @@
+TO RUN:
+>> javac student.java
+>> java student
+
+(or)
+
+>> java student.java
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+>> Java is a static variably language
+>> syso ctrl+space - System.out.println()
+>> main ctrl+space - public ststic void main(String args[])
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+																			  14-03-2025
+ACCESS SPECIFIERS:
+
+>> public, private, protected 
+>> public: we can access anywhere
+>> private: we can access within the class only
+>> protected: we can access within the package
+>> Instance is an object
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OBJECT:
+
+>> Object contains 3 things:
+	1. state
+	2. beh (action)
+	3. identity
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLASS:
+
+>> class (is a keyword)it is a blueprint of an boject
+>> class student{
+        //state  <access-specifier><data type> state_name;
+        //beha  <access-specifier><return type> beh_name;
+	//identity
+}
+
+>> Syntax to crete an object:
+new class name(name,weight,height);
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CONSTRUCTOR:
+
+>> Constructor --> specil type of method used :
+        for initializing instance variables/states.
+
+>> Rules to be followed:
+   	1. class name and constructorname should always be same
+   	2.constructor doesnt allow return type
+	3.constructor will assign values to instance variables using this keyword
+>> Syntax: 
+    <access specifier - public> classname(values from object(){
+         \\code to assign values
+    }
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INHERITANCE: 
+>> we use keyword "extends" for inheriting the parent class properties to child class
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+GETTERS AND SETTERS: (Encapulation in oops)
+>> we can access private variables in other class also within the package
+	private int empID = 20;
+	private String empName = "string";  in Employee class
+>> right click --> source --> generate getters and setters --> select all --> ok 
+ 	System.out.println(emp1.getEmpID());
+	System.out.println(emp1.getEmpName());  in another (star) class 
+
+>> 	emp1.setEmpID(24);
+	emp1.setEmpName("Sindhu"); like this we can set values in another (star) class
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INTERFACEs IN JAVA:
+ 
+>> Interface is a blueprint of a class
+
+>> Rules: 
+	1. Every method in interface is by default abstract and static
+	2. Every state in interface is by default static and final
+
+>> For static method we do not need to create an object, by class name itself we can access that class; 
+   In normal method we need to declare an object by class name and then only we can access that object and class;
+1. Abstract method : abstract is a method that does not have a body
+  Ex:  public abstract void display(): 
+2. Static method : we can access wiyhout creating an object
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+interface ----- implements -------> class  (we should give implementation for unimplemented class in that)
+class --------- extends ----------> class
+interface ----- extends ----------> interface
+
+>> EmployeeInterface is an interface;
+>> For accessing this interface we create one class called EmployeeClass
+>> Using public class EmpClass implements EmpInterface{ we implement the interface 
+>> Then we click on EmpClass and click AddUnimplemented methods 
+>> 	public void isEmployee() {
+		System.out.println("This is Employee class");
+		this is given
+>> For accessing this class we create an object(EmpClass emp1 = new EmpClass();
+		emp1.isEmployee();) in another class EmpStart()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+right click on employee --> source action --> generate constructor --> select all --> ok 
+public Employee(int empID, String empName) {
+        EmpID = empID;
+        this.empName = empName;
+    }
+like this it will create
+
+from scratch
+right click --> new java project ->select location -> give name
+then in that right click -> new java package -> student = name
+inside package right click -> new java file -> Student =name (class name should start from Caps)
+
+class is a blueprint to create an object
+this --> keyword that points to current object
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SPEINGBOOT :
+
+>> Springboot is a java frmework developed above spring 
+>> In spring we hve to do everything manually to overcome this springboot was created
+>> Spring Boot Layred architecture 
+
+				    Interface				     Entity
+	frontEnd -----> Controller -----------> service -------> Repository --------> Datasource(MySQL, Postgresql, MongoDB)
+		  DTO		   <-----------	        <-------            <--------
+
+1. Controller: to send request and send data
+2. Service: directly communicate with repository
+> DTO - Data Transfer Object (b/w client and controller)
+>> when user needs to store data in datasource he hould 1st save it as DTO
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Spring Initializer --> open in chrome
+>> Specify as in screenshot 
+ 	dependencies to be downloaded
+		1. Spring Web
+		2. MySql Driver
+		3. SpringData JPA
+		4. Thymeleaf
+		5. Lombok
+		6. Validation
+		7. Spring Boot DevTools
+
+>> Download - zip file is downloaded
+>> extract it in Springboot folder
+>> eclipse --> file --. import--> existing maven project --> next --> browse--> extracted folder --> Finish
+
+>> Go to -- >SpringBootCrudApplication.java dlete dependencies: 1.j inda ondu
+							     2. 1st in dependcies start
+>> Create another package -->com.geccrud.SpringBootCRUD.controller inside -->com.geccrud.SpringBootCRUD
+>> Create class HomeController inside same created package
+@Controller ctrl+space --> import org.springframework.stereotype.Controller;
+@GetMapping("/") ctrl+space --> import org.springframework.web.bind.annotation.GetMapping;
+>> Class name should start from upper Case;
+   Package name should start from Lower Case;
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+																			   17-03-2025
+>> Create packages- Controller(HomeController mentioned above), Models, Repository, Dto and service
+>> Create class for each packages
+>> Restore the packages deleted
+>> In models package, @entity and @table(names = "students") or import jakarta.persistence.*;(all at the rate will work for *)
+

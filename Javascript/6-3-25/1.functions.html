@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FUNCTIONS</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 0.25px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Arrow functions</h1>
+
+    <!-- <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Adress</th>
+        </tr>
+      </thead>
+      <tbody id="table_body"></tbody>
+    </table> -->
+
+    <script>
+      // when its single line it doesnt need paranthesis
+      const iseven = (num) => num % 2 == 0;
+      const res = iseven(5);
+      console.log(res);
+    </script>
+
+    <!-- <script>
+      const users = [
+        { Name: "Varsha", age: 21, adress: "hassan" },
+        { Name: "Sanjay", age: 19, adress: "hassan" },
+        { Name: "Hema", age: 48, adress: "hassan" },
+        { Name: "Latha", age: 48, adress: "hassan" },
+      ];
+
+      let content = "";
+      for (let item of users) {
+        // console.log(item.name);
+        content += `<tr>
+                <td>${item.Name}</td>
+                <td>${item.age}</td>
+                <td>${item.adress}</td>
+            </tr>`;
+      }
+      console.log(content);
+      document.getElementById("table_body").innerHTML = content;
+    </script> -->
+  </body>
+</html>

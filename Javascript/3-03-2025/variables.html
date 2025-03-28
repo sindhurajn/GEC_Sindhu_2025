@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+   <h1>How many types we can declare the variable</h1> 
+   <h3>4.types</h3>
+   <p>1.automatically</p>
+   <p>2.using var</p>
+   <p>3.using let</p>
+   <p>using  const</p>
+
+   <script>
+    //  1.automatically
+    var1="Hello";
+    console.log(" The value of is : " + var1);
+    console.log(" The value of is : " + typeof var1);
+
+    // 2.var
+    var2= 24;
+    console.log(" The value of is : " + var2);
+    console.log(" The value of is : " + typeof var2);
+
+    // 3.let
+    let var3=true;
+    console.log(" The value of is : " + var3);
+    console.log(" The value of is : " + typeof var3);
+
+    // 4.const
+    const var4=121n;
+    console.log(" The value of is : " + var4);
+    console.log(" The value of is : " + typeof var4);
+
+ 
+   </script>
+
+
+  <script>
+    // Difference between var,let and const
+    // re declaring
+    var var1 = 23;  //do not have block scope
+    console.log("1st: ",var1);
+    var var1 = "Hello";
+    console.log("2nd : ",var1);
+
+
+    // let
+    let var12 = "var12"; //we cannot repeat one again but can change or initialize the value
+    console.log(" let 1st: ",var12);
+    var12 = 12;
+    console.log(" let 1st : ",var12);
+
+    // const
+    const pi=3.14;  //we cannot change the value or redefined the variable
+    console.log(" let 1st: ",pi);
+    //  const pi=23.4;
+    // console.log(" let 2nd : ",pi);
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arrays</title>
+</head>
+
+<body>
+  <h1>Array destructuring</h1>
+
+  <script>
+    // destructuring
+    let array1 = ["item1", "item2", "item3", "item4"];
+    console.log(array1);
+    let var1 = array1[0];
+    let var2 = array1[1];
+    let var3 = array1[2];
+    let var4 = array1[3];
+    console.log(var1, var2, var3, var4);
+
+    let array2 = ["item1", "item2", "item3", "item4"];
+    //   now its printing only 2 items form array
+    // but to make assign rest of them after 2 items we use spread operator ...
+    const [var5, var6, ...rest] = array2;
+    console.log("array: ", var5, var6);
+    console.log("rest: ", rest);
+
+    let array3 = ["item1", "item2", "item3", "item4"];
+    const [var7, var8, var9, var10] = array3;
+    //   to print only the items we require
+    //   1st way
+    console.log(var7, var9);
+    //   2nd way
+    //   const [var5 , ,var]
+
+    //nested destructuring
+    // Users
+    const users = [
+      { Name: "Varsha", age: 21, adress: "hassan" },
+      { Name: "Sanjay", age: 19, adress: "hassan" },
+      { Name: "Hema", age: 48, adress: "hassan" },
+      { Name: "Latha", age: 48, adress: "hassan" },
+    ];
+
+    const [{ Name }, user2, user3] = users;
+    // now to get only name form user1 we use nested destructuring
+    console.log(Name);
+    console.log(user2);
+    console.log(user3);
+  </script>
+</body>
+
+</html>

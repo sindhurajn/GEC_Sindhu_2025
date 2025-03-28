@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .child {
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="bg-secondary-subtle">bootstrap</div>
+    <div class="container py-3 h-50">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-12 child bg-info">1</div>
+            <div class="col-lg-3 col-sm-6 col-12 child bg-primary">2</div>
+            <div class="col-lg-3 col-sm-6 col-12 child bg-success">3</div>
+            <div class="col-lg-3 col-sm-6 col-12 child bg-danger">4</div>
+        </div>
+    <div class="container py-3 h-50">
+        <div class="row">
+            <div class="col-lg-1 col-sm-2 col-12 child bg-info">1</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-primary">2</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-success">3</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-danger">4</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-info">5</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-primary">6</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-success">7</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-danger">8</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-info">9</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-primary">10</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-success">11</div>
+            <div class="col-lg-1 col-sm-2 col-12 child bg-danger">12</div>
+           
+        </div>
+    </div>
+    <div class="container py-3 h-50">
+        <div class="row">
+            defult col- will take full width in any size 
+            <div class="col- child bg-info">1</div>
+            <div class="col- child bg-primary">2</div>
+        </div>
+    </div> -->
+
+    <!-- row-cols-* = 1-12(ex: row-cols-4)
+        row-*-*-* = sm-xxxl 1-12 (ex: row-cols-md-3) 
+         -->
+    <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6">
+        <div class="col bg-success">1</div>
+        <div class="col bg-danger">2</div>
+        <div class="col bg-info">3</div>
+        <div class="col bg-primary">4</div>
+        <div class="col bg-secondary">5</div>
+        <div class="col bg-warning">6</div>
+        <!-- <div class="col">7</div>
+            <div class="col">8</div>
+            <div class="col">9</div>
+            <div class="col">10</div>
+            <div class="col">11</div>
+            <div class="col">12</div> -->
+
+    </div>
+
+    <h1>allignment</h1>
+
+    <!-- <div class="row h-50 row-cols-2 align-items-lg-start align-content-xl-center justify-content-lg-around justify-content-sm-between"> -->
+    <div class="row h-50 row-cols-2 row justify-content-between align-items-lg-end">
+        <div class="col bg-success w-25">1</div>
+        <div class="col bg-danger w-25">2</div>
+        <div class="col bg-info w-25">3</div>
+        <div class="col bg-primary w-25">4</div>
+        <div class="col bg-secondary w-25">5</div>
+        <div class="col bg-warning w-25">6</div>
+
+    </div>
+    <h2>Grid Nesting</h2>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-3 bg-secondary">
+            1
+          </div>
+          <div class="col-sm-9 bg-info">
+            <div class="row">
+              <div class="col-8 col-sm-6">
+                2
+              </div>
+              <div class="row bg-warning ">
+                <div class="co-4">5</div>
+                <div class="col-3">6</div>
+                <div class="col-2">7</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

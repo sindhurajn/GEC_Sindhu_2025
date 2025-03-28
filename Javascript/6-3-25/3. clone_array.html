@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloning an array</title>
+</head>
+
+<body>
+  <h1>How to clone an array</h1>
+  <p>1. spread operator(...)</p>
+  <p>2. slice</p>
+  <p>3. concat</p>
+
+  <script>
+    // Cloning means having exact copy of an array that doesnt change even after some operations are done on the main array.. This methond is used to retain the origin array that doesnt change
+
+    // using const is best for arrays
+    // when we use const for array we can change values but cannot reassign the value sin array
+    const array1 = [1, 2, 3, 4];
+    //   array1.push(23);
+
+    //   array1 = [5, 7, 7, 4]; //   cant reassign values that is
+    //   console.log(array1);
+    //   const array2 = array1;
+    //   array1.push(24);
+    //   console.log("array1:", array1); //1, 2,3 ,4 ,24
+    //   console.log("array2:", array2); //1, 2,3 ,4 ,24
+
+    // 1. Spread operator(...)
+    //   most used beacuse of its simplicity
+    // but in case of when using spread operators the changes doenst get updated
+    const array2 = [...array1];
+    array1.push(24);
+    console.log("array1", array1); //1,2,3,4,24
+    console.log("array2", array2); // 1,2 ,3 4
+
+    //   2. Slice operators:
+    const array3 = [1, 2, 3, 4];
+    const array4 = array3.slice(0);
+    array3.push(24);
+    console.log("The array3 is", array3); // 1,2,3,4,24 // 24 is added
+    console.log("The array4 is", array4); // 1,2,3,4 // since it is cloned array doesnt has 24
+
+    //3.concat method
+    const array5 = [1, 2, 3, 4];
+    const array6 = [].concat(array5);
+    array5.push(24);
+    console.log("array5 is", array5);
+    console.log("array6 is", array6);
+  </script>
+</body>
+
+</html>

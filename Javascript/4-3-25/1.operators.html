@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>operators</title>
+  </head>
+  <body>
+    <h1>Operators in JS</h1>
+    <p>1. Arithmetical opertaors: +, -, *, %, **</p>
+    <p>2. Asignment operators: =, +=, -=, /=, %=, *=, **=</p>
+    <p>3. Comparision operators : == ,===, !=, !==, <, > , <=, >=</p>
+    <p>4. Bitwise: &, | ~ , ^, >>=(s),>>>=(un)</p>
+    <p>5. Logical: && , ||, !</p>
+    <p>6. Teranary operators: ?:</p>
+
+    <script>
+      // csn also use var z=Math.pow(a,2)
+      // 1.
+      var a = 2;
+      var b = 3;
+      var c = a ** b;
+      console.log("ans is", c);
+
+      console.log(5 + 3);
+      console.log(10 % 3);
+      console.log(2 ** 4);
+
+      // 2.Assign
+      let x = 10;
+      x += 5;
+      console.log("+ assign", x);
+
+      let y = 10;
+      y /= 5;
+      console.log(y);
+
+      let z = -100;
+      z >>= 5;
+      console.log(z);
+
+      //   3. Comparision operators
+
+      // equal
+      var a = 2;
+      var b = 3;
+      var c = a == b;
+      console.log("ans is", c);
+
+      console.log(5 == "5"); //true (value is same)
+      //   strictly equal
+      console.log(5 === "5"); //false (because different types)
+
+      //   not equal to
+      var a = 2;
+      var b = 3;
+      var c = a != b;
+      console.log("ans is", c);
+
+      //   stricatly not equal to
+      console.log(5 !== "5");
+      console.log(5 !== 5);
+
+      console.log(3 >= 3);
+
+      //   4. Bitwise operators
+      //    AND:   Compares two numbers bit by bit.
+      // The result is 1 only if both bits are 1.
+      // Otherwise, the result is 0.
+      var a = 2;
+      var b = 3;
+      var c = a & b;
+      console.log("and is", c);
+
+      // OR:  Compares two numbers bit by bit.
+      // The result is 1 if at least one bit is 1.
+      // Only 0 if both bits are 0.
+      var a = 2;
+      var b = 3;
+      var c = a | b;
+      console.log("or is", c);
+
+      //   XOR^ :The result is 1 only if the bits are different.
+      // If both bits are 0 or 1, the result is 0.
+      console.log(2 ^ 3);
+
+      //   complement:Flips all bits (1 → 0, 0 → 1).
+      // Since JavaScript uses two’s complement representation, ~x is equivalent to -(x+1).
+      console.log(~2);
+
+      //right shift
+      let p = 7;
+      p >>= 2;
+      console.log(p);
+
+      //   left shift
+      let q = 7;
+      q <<= 2;
+      console.log(q);
+
+      //   5. Logical operators
+
+      // &&:  Returns true if both operands are true.
+      // Returns false if at least one operand is false.
+      // Uses short-circuiting (stops evaluating as soon as it finds false).
+      console.log("Logical operators");
+      console.log(true & true);
+
+      let r = 10;
+      let result = r > 5 && r < 0;
+      console.log(result);
+
+      //   ||:Returns true if at least one operand is true.
+      // Returns false only if both operands are false.
+      console.log(true || false);
+      console.log(true || console.log("This won't execute")); // true
+
+      let name = "";
+      let userName = name || "Guest";
+      console.log(userName); // "Guest"
+      //   Why? If name is empty ("" is falsy), userName gets "Guest".
+
+      //   ! :Reverses the Boolean value.
+      // !true becomes false, and !false becomes true.
+      console.log(!true);
+
+      //   Ternary operators: ? :
+      //   Reverses the Boolean value.
+      // !true becomes false, and !false becomes true.
+
+      let w = 2;
+      let f = 3;
+      console.log(a > b ? a : b);
+
+      console.log(5 && 1); // Logical AND → 1 (truthy value)
+
+      console.log("----------------");
+      let var3 = 3;
+      let var4 = 2;
+      console.log("&:", var3 & var4); // will work as bitwise operators
+    </script>
+  </body>
+</html>

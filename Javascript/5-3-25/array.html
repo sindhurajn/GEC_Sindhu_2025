@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h1>Array in JS</h1>
+    <p>Operations</p>
+    <p>1.push</p>
+    <p>2. pop</p>
+    <p>3. shift</p>
+    <p>4. unshift</p>
+
+    <table>
+      <tr>
+        <th>firstName</th>
+        <th>Age</th>
+        <th>adress</th>
+      </tr>
+    </table>
+
+    <script>
+      // array is not homogeneous in javascript
+      // list in python is heterogeneous
+      let array = [1, 2, 3, 4, 5, 6];
+      console.log(array);
+      console.log(array[3]);
+
+      //   push and pop
+      //   last element will be popped
+      //   23 gets added at last in push
+      const res = array.pop();
+      console.log("after poping", array);
+      console.log("the popped elemnt is ", res);
+
+      array.push(23);
+      console.log("after pushing", array);
+
+      //   unshift and shift
+      //   21 gets added at first
+      let array1 = [1, 2, 3, 4, 5];
+      array1.unshift(21);
+      console.log("Unshift:", array1);
+      //   first element gets popped
+      array1.shift();
+      console.log("Shift", array1);
+    </script>
+
+    <script>
+      // to pass the data between frantend and backend we use array
+      let array3 = [12, "HI", true, null, { Name: "Varsha" }];
+      console.log(array3);
+      console.log(typeof array3[4]);
+
+      for (let item in array3) {
+        console.log(array3[item], typeof array3[item]);
+      }
+
+      for (let item of array3) {
+        console.log(`The item is ${item} and type of item is ${typeof item}`);
+      }
+      // use inner html
+      // let users = [
+      //   {
+      //     firstName: "VArsha",
+      //     age: 20,
+      //     adress: "gg",
+      //   },
+      //   {},
+      // ];
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container shadow-lg p-3 sy-3 rounded-5">
+        <div class="row-justify-content-center">
+            <h1 class="text-center">Registration Form</h1>
+            <div class="col-12 col-sm-8 col-lg-6">
+                <form action="" id="registrationForm" novalidate>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="email">Email address</label>
+                        <input type="email" class="email" id="email" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="address">Address</label>
+                        <textarea class="address" id="address" rows="3"></textarea>
+                      </div>
+                      <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const registrationForm = document.querySelector("#registrationForm");
+            registrationForm.addEventListener("submit",(e) => {
+
+                e.preventDefault();
+            });
+                const showError = (eleid, text) => {
+                    document.getElementById(eleid).textContent = text;
+                }
+                
+                const nameError = (eleid, text) => {
+                    document.getElementById(eleid).textContent = "";
+                }
+                
+                const formValid = () => {
+                    const isValid = true;
+                 
+                const name = document.querySelector("#name").value.trim();
+                const email = document.querySelector("#email").value.trim();
+                const password = document.querySelector("#password").value;
+                const cpassword = document.querySelector("#cpassword").value;
+                const address = document.querySelector("#address").textContent;
+                const pincode = document.querySelector("#pincode").value.trim();
+                console.log(name, email, password, address, pincode);
+
+                if(name===""){
+                    showError("nameError", "Name field is required");
+                    isValid = false;
+                }else if(name, length < 3) {
+                    showError("nameError", "Name requires atleast 3 characters");
+                    isValid = false;
+                }else{
+                    claerError("nameError");
+                    isValid=true;
+                }
+
+                const emailpattern = /^[a-zA-Z0-9,_%+-]+@[a-zA-Z0-9,-]+\.[a-xA-Z{3,}]/
+                if(email===""){
+                    showError("emailError", "Email field is required");
+                    isValid = false;
+                }else if(!emailpattern.test(email)) {
+                    showError("emailError", "Email pattern is incorrect");
+                    isValid = false;
+                }else{
+                    claerError("emailError");
+                    isValid=true;
+                }
+                const passwordpattern = /^?*[a-zA-Z0-9,_%+-]+@[a-zA-Z0-9,-]+\.[a-xA-Z{3,}]/
+                if(password===""){
+                    showError("passwordError", "password field is required");
+                    isValid = false;
+                }else if(!passwordpattern.test(email)) {
+                    showError("passwordError", "password pattern is incorrect");
+                    isValid = false;
+                }else{
+                    claerError("passwordError");
+                    isValid=true;
+                }
+                
+                
+                return isValid;
+            }
+            if(formValid()){
+                alert("Form submission successful");
+                registrationForm.submit();
+            }
+        });
+    </script>
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // const namereg = /^[h]/i; starts with h or not (i is case insensitive)
+            // const namereg = /[h]$/i; ends with h or not 
+            // const namereg = /(?~,*[a-z])/i; ends with h or not atleast 1 match 
+            // strat and end with /
+            // ^ strting $ ending 
+           // + one or more matches * 0 or more matches
+           // \ is escape character \n    \t tab space
+           //  {2,} atelast 2 characters
+        })
+        </script>
+    </body>
+</html>

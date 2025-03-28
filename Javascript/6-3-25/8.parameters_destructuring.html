@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parameter destructuring</title>
+</head>
+
+<body>
+  <h1>Parameter destructuring</h1>
+
+  <script>
+    const display = function ({ age, ...rest }) {
+      console.log(age);
+      console.log(rest);
+    };
+    //   we can pass anything to the parameter, numbers, array , strings etc
+    display({ age: 10 });
+    display({ name: "VArsha" });
+    display({ name: "varsha", age: 21 });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>STRINGS IN JS</h1>
+    <p>Methods in strings</p>
+    <p>1.length</p>
+    <p>2.slice</p>
+    <p>3.substring</p>
+    <p>4. substr</p>
+    <p>5. replace</p>
+    <p>6. toUpperCAse()</p>
+    <p>7. toLowerCase</p>
+    <p>8. trim()</p>
+    <p>9.indexof()</p>
+    <p>10. startswith()</p>
+    <p>11. endswith</p>
+    <p>12. includes</p>
+    <p>13. concat()</p>
+
+    <script>
+      // string is immutable so every operation is done by declaring new string
+
+      //   let str1 = "hello World";
+      //   console.log(str1);
+      //   console.log(typeof str1);
+
+      //   1. Length
+      let str1 = "Hello World";
+      const len = str1.length;
+      console.log(`The length of string ${str1} is: ${len} `);
+      //   other ways
+      //   using + will consider everything as string
+      //   console.log("The length of string is " + str1 + " is: " + len);
+      //   using , preserves the data type of the str 1 or len
+      //   console.log("The length of string", str1, "is :", len);
+
+      //   2. slice
+      let str2 = "javascript";
+      let str3 = str2.slice(2, 7);
+      console.log(`The sliced string is: ${str3}`);
+      console.log(str2[5]); // c
+      console.log(str2.slice(-1)); // t
+      //   when u give negative number if u give -3 the last 3 letters are excluded and starts form the next letter form right
+      console.log("The sliced string is:", str2.slice(-8, -3));
+
+      //  3. substring
+      let str4 = "Hello Javascript";
+      let str5 = str4.substring(2, 7); //last index is excluded
+      console.log(`The string is : ${str5}`);
+      //   negative index doesnt work in substring- it displays empty
+      console.log(`The string is ${str5.substring(-13, -9)}`);
+
+      //   4. substr
+      //   in this it will start from 2 and then consider 2 as 1 and counts still 7
+      //   so 2 is from where it shuld start , 7 is the length it shukd go from 2
+      let str6 = "Hello World";
+      let str7 = str6.substr(2, 7);
+      console.log(`The string is : ${str7}`);
+      //   in negative from right 7 th, 3 from that 7th to left to right
+      console.log(`The string is ${str6.substr(-7, 3)}`);
+
+      // 5. replace
+      let str8 = "java Script";
+      let str9 = str8.replace("java", "Python");
+      console.log(`The string is ${str9}`);
+
+      //   6. Uppercase
+      let str10 = "hello";
+      let str11 = str10.toUpperCase();
+      console.log(`The string is ${str11}`);
+
+      //   7. Lowercase
+      let str12 = str11.toLowerCase();
+      console.log(`The string is ${str12}`);
+
+      //   8. trim
+      let str13 = "     Javascript      ";
+      let str14 = str13.trim();
+      console.log(`The string is ${str13}`);
+      console.log(`The string is ${str14}`);
+
+      //   9. indexof
+      let str15 = "Hello World";
+      let index = str15.indexOf("o W");
+      console.log(`The index of is ${index}`);
+
+      //   10. startswith
+      let str16 = "Hello Javascript";
+      let res = str16.startsWith("ello");
+      let re = str16.startsWith("Hello");
+      console.log(`The result is ${res}`);
+      console.log(`the result is ${re}`);
+
+      //   11. endsWith
+      let str17 = "Hello Javascript";
+      let resu = str17.endsWith("script");
+      console.log(`The result is ${resu}`);
+
+      // 12. includes
+      let str18 = "hello Havascript";
+      let result = str18.includes("h");
+      console.log(`the string result is ${result}`);
+
+      //13. concat()
+      let str19 = "Hello";
+      let str20 = str19.concat(" ", "World");
+      console.log(`The result is ${str20}`);
+    </script>
+  </body>
+</html>

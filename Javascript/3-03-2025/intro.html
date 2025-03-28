@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JS</title>
+    <script src="./first.js" defer></script>
+
+    <!-- <script>
+        function handleClick(){
+            document.getElementById('demo').innerText='Hello Internal JS';
+        }
+       </script> -->
+</head>
+<body>
+   <p id="demo">Hello HTML</p> 
+   <button type="button" onclick="document.getElementById('demo').innerText='Hello JS'">HTML JS</button>
+
+   <button type="button" onclick="handleClick()">Internal JS</button>
+
+   <button type="button" onclick="handleExternalClick()">External JS</button>
+
+
+
+   <!--Internal Js  -->
+   <script>
+    function handleClick(){
+        document.getElementById('demo').innerText='Hello Internal JS';
+    }
+   </script>
+
+</body>
+</html>

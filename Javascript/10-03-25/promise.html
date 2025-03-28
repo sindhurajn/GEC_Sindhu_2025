@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+
+        qqqqqq
+    </p>
+    <script>
+        const items = ["vegetables", "salt", "rice", "chips"];
+        const result = new Promise((resolve, reject) => {
+            if (items.includes("vegetables") && items.includes("salt") && items.includes("rice")) {
+                return resolve("fried rice")
+            } else{
+                return reject("cannot make fried rice")
+            }
+        });
+        //await result;
+
+        //1. then and catch
+        console.log(result);
+        result.then((value) => {
+            console.log(value);
+        }).catch(error => console.log(error));
+
+        // //2. using await 
+        // const fried_rice = async() => {
+        //     const res = await result;
+        //     console.log("with await", res);
+        // }
+
+         // //2. using await (try and catch)
+        const fried_rice = async() => {
+            try{
+
+                const res = await result;
+                console.log("with await", res);
+            }catch(error){
+                console.log("with await", error)
+            }
+        }
+
+
+    </script>
+</body>
+</html>

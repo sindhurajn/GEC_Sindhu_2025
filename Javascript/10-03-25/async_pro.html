@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            justify-items: center;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction:column;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Async JS Project</p>
+        <h2 id="date_time"></h2>
+        <button type="button" id="btn">stop</button>
+    </div>
+
+    <script>
+        const container = document.getElementById("container");
+        const id = setInterval(() => {
+            const red = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+            const res = `rgb(${red} ${green} ${blue})`;
+            document.body.style.backgroundColor = res;
+        }, 1000);
+
+        document.addEventListener("DOMContentLoaded",() => {
+            document.getElementById("btn").addEventListener("click", (e) => {
+                clearInterval(id);
+                e.target.textContent = document.body.style.backgroundColor;
+            })
+        })
+        setInterval(() => {
+            const date = new Date();
+            console.log(date.toLocaleString());
+            console.log(date.toDateString());
+            console.log(date.toTimeString());
+            document.querySelector("#date_time").innerText = date;
+        }, 1000)
+    </script>
+</body>
+</html>

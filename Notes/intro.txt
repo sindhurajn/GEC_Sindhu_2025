@@ -159,7 +159,7 @@ convert DTO to entity and vice-versa
 	2. JPARepository: Java Persistance API --- crud, pagenation or sorting
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Spring Initializer --> open in chrome
->> Specify as in screenshot 
+>> Specify as in screenshot (C:\Users\user\Pictures\Screenshots(52 and 53))
  	dependencies to be downloaded
 		1. Spring Web
 		2. MySql Driver
@@ -172,6 +172,7 @@ Spring Initializer --> open in chrome
 >> Download - zip file is downloaded
 >> extract it in Springboot folder
 >> eclipse --> file --. import--> existing maven project --> next --> browse--> extracted folder --> Finish
+>> scr/main/java -- package -- class inside that package only we should create controller ad all
 
 >> Go to -- >SpringBootCrudApplication.java dlete dependencies: 1.j inda ondu
 							     2. 1st in dependcies start
@@ -187,4 +188,33 @@ Spring Initializer --> open in chrome
 >> Create class for each packages
 >> Restore the packages deleted
 >> In models package, @entity and @table(names = "students") or import jakarta.persistence.*;(all at the rate will work for *)
+
+>> Set of .cllass files is kanown as jar files / group of .class files is a jar
+>>JRE Java Runtime Environment
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+To connect database and create table/model:
+==========================================
+>> in application properties:
+	spring.datasource.url=jdbc:mysql://localhost:3306/mydatabase (in xamp mysql admin create new database calld mydatabase)
+	spring.datasource.username=root (default it is root)
+	spring.datascource.password= (by default it is none)
+	#optional
+	spring.jpa.show-sql:true
+	spring.jpa.hibernate.ddl-auto=update 
+>> Create a package .models:
+>> Create class Student.java:
+	@Entity
+	@Table(name = "students")
+	public class Student {
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@Column(name = "std_id")
+		private long id;
+		@Column(name = "std_name")
+		private String name;
+Generate constructore
+Generate getters and setters
+>> Run Xamp 
+>> Admin -->structures table named students is created with fields Id and name where id is primary key
 

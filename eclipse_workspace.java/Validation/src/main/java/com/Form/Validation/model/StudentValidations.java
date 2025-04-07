@@ -16,6 +16,7 @@ public class StudentValidations {
 	private int age;
 	private String email;
 	private String password;
+	private String imagePath;
 	public StudentValidations(long id, String name, int age, String email,  String password) {
 		super();
 		this.id = id;
@@ -23,6 +24,7 @@ public class StudentValidations {
 		this.age = age;
 		this.email = email;
 		this.password= password;
+		this.imagePath=imagePath;
 	}
 	public StudentValidations() {
 		super();
@@ -57,6 +59,12 @@ public class StudentValidations {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getImagePath() {
+		return imagePath;
+	}
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
 	
 	

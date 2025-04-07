@@ -218,3 +218,16 @@ Generate getters and setters
 >> Run Xamp 
 >> Admin -->structures table named students is created with fields Id and name where id is primary key
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to handle images in spring boot:
+====================================
+
+There are 3 ways:
+	1. using file system - recommended
+	2. using aws - recommended to use in production
+	3. using blob in db - not recommended
+>> enctype="multipart/form-data" --> we should include when we are giving image as an input
+>> when we send images from frontend to backend we do not store directly in database we give the path where the image is stored to backend(first store inside file and then path is given)
+>> when we store images in aws it is stored in s3 bucket (storage) -- in production environment
+>> when we store images in db, it stores as blob (it uses more storage so it is not recommended)

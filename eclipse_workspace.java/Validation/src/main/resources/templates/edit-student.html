@@ -5,9 +5,9 @@
 <title>Add Student</title>
 </head>
 <body>
-    <h1>Add Student</h1>
+    <h1>Edit Student</h1>
     
-    <form th:action="@{/add-student}" enctype="multipart/form-data" method="post" th:object="${studentDTO}">
+    <form th:action="@{/edit-student(id=${student.id})}" enctype="multipart/form-data" method="post" th:object="${studentDTO}">
         <!-- Name Input -->
         <label for="name">Name:</label>
         <input type="text" th:field="*{name}" id="name" placeholder="Enter your name"><br>
@@ -28,12 +28,14 @@
         <input type="password" th:field="*{password}" id="password" placeholder="Enter your Password"><br>
         <p th:if="${#fields.hasErrors('password')}" th:text="${#fields.errors('password')}"></p>
         
+        <!-- Image Input -->
         <label for="image">Image:</label>
+        <img alt="image" height="100px" width="100px" th:src="@{'images/'+${student.imagePath}}">
         <input type="file" th:field="*{image}" id="image"><br>
-        <p th:if="${#fields.hasErrors('image')}" th:text="${#fields.errors('image')}"></p>
+        <p th:if="${#fields.hasErrors('image')}" th:errors="${#fields.errors('image')}"></p>
 
         <!-- Submit Button -->
-        <input type="submit" value="Add Student">
+        <input type="submit" value="edit Student">
     </form>
 </body>
 </html>

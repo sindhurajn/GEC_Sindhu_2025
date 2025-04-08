@@ -52,12 +52,34 @@ public class StudentService {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+		
+		MultipartFile resume = studentDTO.getResume();
+		Date createdAt1 = new Date();
+		String storeResumeName = createdAt1.getTime()+"_"+resume.getOriginalFilename();
+		System.out.println(storeResumeName);
+		
+		try {
+			String  uploadDir1 = "public/docs/";
+			Path uploadPath1 = Paths.get(uploadDir1);
+			if(!Files.exists(uploadPath1)) {
+				Files.createDirectories(uploadPath1);
+		}
+			try {
+				InputStream inputStream = resume.getInputStream();
+				Files.copy(inputStream, Paths.get(uploadDir1+storeResumeName), StandardCopyOption.REPLACE_EXISTING);
+			} catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 		StudentValidations student = new StudentValidations();
 		student.setName(studentDTO.getName());
 		student.setAge(studentDTO.getAge());
 		student.setEmail(studentDTO.getEmail());
 		student.setPassword(studentDTO.getPassword());
 		student.setImagePath(storeImageName);
+		student.setResumePath(storeResumeName);
 		studentRepository.save(student);
 	}
 
@@ -76,6 +98,14 @@ public class StudentService {
 		Path imagePath = Paths.get(uploadDir+student.getImagePath());
 		try {
 			Files.delete(imagePath);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		String uploadDir1 = "public/docs/";
+		Path resumePath = Paths.get(uploadDir1+student.getResumePath());
+		try {
+			Files.delete(resumePath);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -115,6 +145,26 @@ public class StudentService {
 				System.out.println(e.getMessage());
 			}
 			student.setImagePath(storeImageName);
+		}
+		
+		if(!studentDTO.getResume().isEmpty()) {
+			Path oldResumePath = Paths.get("public/docs/"+student.getResumePath());
+			try {
+				Files.delete(oldResumePath);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			MultipartFile resume = studentDTO.getResume();
+			Date createdAt1 = new Date();
+			String storeResumeName = createdAt1.getTime()+"_"+resume.getOriginalFilename();
+			String uploadDir1 = "public/docs/";
+			try {
+				InputStream inputStream = resume.getInputStream();
+				Files.copy(inputStream, Paths.get(uploadDir1+storeResumeName), StandardCopyOption.REPLACE_EXISTING);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+			student.setResumePath(storeResumeName);
 		}
 		student.setName(studentDTO.getName());
 		student.setAge(studentDTO.getAge());

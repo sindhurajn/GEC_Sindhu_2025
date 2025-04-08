@@ -5,7 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.Form.Validation.model.StudentValidations;
 
 public interface StudentRepository extends JpaRepository<StudentValidations, Long> {
-	
-	public StudentValidations findByEmail(String email);
 
 }

@@ -1,0 +1,21 @@
+        AREA ASCEND,CODE,READONLY
+ENTRY
+START
+        MOV R5,#3
+NXTPASS LDR R0,A
+        MOV R4,R5
+NXTCOMP LDR R2,[R0]
+        MOV R1,R2
+        ADD R0,#4
+        LDR R2,[R0]
+        CPM R1,R2
+        BLS NOEXG
+        STR R1,[R0],#-4
+        STR R2,[R0],#4
+NOEXG   SUBS R4,#1
+        BNE NXTCOMP
+        SUBS R5,#1
+        BNE NXTPASS
+B1      B   B1
+A       DCD 0x40000000
+        END

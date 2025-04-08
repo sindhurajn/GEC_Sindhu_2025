@@ -63,19 +63,21 @@
                 <th>Image</th>
                 <th>Age</th>
                 <th>Email</th>
+                <th>Resume</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="student : ${students}">
-                <td th:text="${student.id}">1</td>
+                <td th:text="${student.id}">Id</td>
                 <td th:text="${student.name}">Name</td>
                 <td> <img width="100px" height="100px" alt="image" th:src="@{'images/'+${student.imagePath}}"></td>
                 <td th:text="${student.age}">Age</td>
                 <td th:text="${student.email}">Email</td>
+                <td> <img width="100px" height="100px" alt="resume" th:src="@{'docs/'+${student.resumePath}}"></td>
                 <td>
-			        <a th:href="@{/std-edit(id=${student.id})}">edit</a>              
-    				<a th:href="@{/std-delete(id=${student.id})}">delete</a>  
+			        <a th:href="@{/std-edit(id=${student.id})}" style="color: #2980b9; font-weight: bold;">Edit</a>              
+    				<a th:href="@{/std-delete(id=${student.id})}" style="color: #2980b9; font-weight: bold;">Delete</a>  
                 </td>
             </tr>
         </tbody>

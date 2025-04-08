@@ -24,6 +24,7 @@ public class StudentDTO {
     private String password;
     
     private MultipartFile image;
+    private MultipartFile resume;
 
     // Getters and Setters
     public String getName() {
@@ -65,6 +66,16 @@ public class StudentDTO {
 	public void setImage(MultipartFile image) {
 		this.image = image;
 	}
+
+	public MultipartFile getResume() {
+		return resume;
+	}
+
+	public void setResume(MultipartFile resume) {
+		this.resume = resume;
+	}
+	
+	
     
     
 }

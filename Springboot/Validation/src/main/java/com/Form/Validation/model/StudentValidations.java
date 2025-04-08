@@ -1,7 +1,5 @@
 package com.Form.Validation.model;
 
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,22 +14,15 @@ public class StudentValidations {
 	private long id;
 	private String  name;
 	private int age;
-	@Column(unique = true)
 	private String email;
 	private String password;
-	private String imagePath;
-	private String resumePath;
-	
-	public StudentValidations(long id, String name, int age, String email, String password, String imagePath,
-			String resumePath) {
+	public StudentValidations(long id, String name, int age, String email,  String password) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.email = email;
-		this.password = password;
-		this.imagePath = imagePath;
-		this.resumePath = resumePath;
+		this.password= password;
 	}
 	public StudentValidations() {
 		super();
@@ -67,20 +58,6 @@ public class StudentValidations {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getImagePath() {
-		return imagePath;
-	}
-	public void setImagePath(String imagePath) {
-		this.imagePath = imagePath;
-	}
-	public String getResumePath() {
-		return resumePath;
-	}
-	public void setResumePath(String resumePath) {
-		this.resumePath = resumePath;
-	}
-	
-	
 	
 	
 }

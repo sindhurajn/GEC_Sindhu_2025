@@ -46,3 +46,24 @@ Dispatcher Servlets >> DelegatingFilterProxy >> FilterChainProxy (checks for whi
 >> Servlet Filter Chain will handle the request by default if authentication is not used
 
 >> Refer Spring Security 
+
+>> Spring initializer >> add dependencies(1. Spring Web, 2. Thymeleaf, 3. Spring Boot Dev Tools, 4. Spring Security) >> Grnerate >> Extract files (from zip file)(These depencies are enough just to run html template[) >> Import (in eclipse) >> Create controller and html page >> Run localhost (It will redirect to login page which is created by spring security by default) >> password is generated in console username is by default: user >> to logout --> localhost8080/logout (it will show confirmation which is also created by spring security by default)
+
+>> We can change the username and password in application properties:
+  spring.security.user.name=sindhu
+  spring.security.user.password=Sindhu1@ 
+(spring-security6 dependency will allow use of some html tags which is provided by spring security itself)
+
+>> For RestAPI we use @RestController instead of @Controller
+>> Postman --> new --> workspace --> next --> create --> Add --> blank collection --> create request --> GET -- http://localhost:8080/ --> send 
+before sending comment security and test security dependencies in pom.xml run the file and what is written in return it will consider as string and return it 
+
+httpBasicAuthentication:
+>> we can pass username and password in auth tab by selecting basic auth
+>> headers we have to pass by:
+"Basic username:password" -> in Base64 enode
+browse base64 --> base64 enode and decode online --> select encode --> type in format - username:password --> encode --> code is generated --> in postman go to Authorization --> select 'No Auth' --> in headers -- key:Authorization and Value: Basic code_generated Ex: Basic c2luZGh1OlNpbmRodTFA --> send 
+[sindhu:Sindhu1@ -> Basic (space after encode the code generated should be pasted)]
+
+
+SecurityContext folder: holds 

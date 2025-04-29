@@ -171,7 +171,7 @@ Spring Initializer --> open in chrome
 
 >> Download - zip file is downloaded
 >> extract it in Springboot folder
->> eclipse --> file --. import--> existing maven project --> next --> browse--> extracted folder --> Finish
+>> eclipse --> file --> import--> existing maven project --> next --> browse--> extracted folder --> Finish
 >> scr/main/java -- package -- class inside that package only we should create controller ad all
 
 >> Go to -- >SpringBootCrudApplication.java dlete dependencies: 1.j inda ondu

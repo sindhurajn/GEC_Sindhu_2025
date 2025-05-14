@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Students</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/students.css}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand text-primary fw-bold" href="#">TrackHub</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" th:href="@{/dashboard}">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link active" th:href="@{/students}">Students</a></li>
+          <li class="nav-item"><a class="nav-link" th:href="@{/student/login}">Student Login</a></li>
+          <li class="nav-item"><a class="nav-link" th:href="@{/parent/login}">Parent Login</a></li>
+          <li class="nav-item"><a class="nav-link" th:href="@{/settings}">Settings</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search students..." id="searchInput">
+        </form>
+        <div class="rounded-circle bg-primary text-white px-3 py-2 ms-3">TE</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Student Summary -->
+  <div class="container mt-4">
+    <h4>Students</h4>
+    <p class="text-muted">Manage and track your students' progress</p>
+    <div class="row g-3">
+      <div class="col-md-3"><div class="card p-3">Total Students: <strong th:text="${totalStudents}">6</strong></div></div>
+      <div class="col-md-3"><div class="card p-3">Active Students: <strong th:text="${activeStudents}">5</strong> <span class="text-success" th:text="'(' + ${activePercentage} + '%)'">(83%)</span></div></div>
+      <div class="col-md-3"><div class="card p-3">Avg. Attendance: <strong th:text="${avgAttendance + '%'}">88%</strong></div></div>
+      <div class="col-md-3"><div class="card p-3">At Risk Students: <strong th:text="${atRiskStudents}">1</strong> <span class="text-danger" th:text="'(' + ${riskPercentage} + '%)'">(17%)</span></div></div>
+    </div>
+
+    <!-- Search and Filters -->
+    <div class="row mt-3">
+      <div class="col-md-4"><input type="text" class="form-control" placeholder="Search by name or email..." id="searchStudent"></div>
+      <div class="col-md-3">
+        <select class="form-select" id="gradeFilter">
+          <option>All Grades</option>
+          <option th:each="grade : ${grades}" th:text="${grade}"></option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select" id="statusFilter">
+          <option>All Status</option>
+          <option th:each="status : ${statuses}" th:text="${status}"></option>
+        </select>
+      </div>
+      <div class="col-md-2 text-end">
+        <a class="btn btn-primary" th:href="@{/students/add}">Add New Student</a>
+      </div>
+    </div>
+
+    <!-- Student Cards -->
+    <div class="row g-3 mt-3" id="studentCards">
+  <div class="col-md-4" th:each="student : ${students}">
+    <div class="card p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <strong th:text="${student.name}"></strong>
+        <span class="badge"
+              th:classappend="${student.status == 'Active'} ? 'bg-success' : 'bg-danger'"
+              th:text="${student.status}"></span>
+      </div>
+      <small th:text="${student.email}"></small>
+      <p class="mb-1">Course: <span th:text="${student.course}"></span></p>
+      <p class="mb-1">Last Active: <span th:text="${student.lastActive}"></span></p>
+      <p class="mb-1">Assignments: <span th:text="${student.assignments}"></span></p>
+      <p class="mb-1">Attendance Rate: <strong th:text="${student.attendanceRate + '%'}"></strong></p>
+      <div class="text-end"><button class="btn btn-link">View Full Profile</button></div>
+    </div>
+  </div>
+</div>
+
+  <script th:src="@{/js/students.js}"></script>
+</body>
+</html>
